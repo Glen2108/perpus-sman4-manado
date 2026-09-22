@@ -88,6 +88,15 @@
             100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
         }
 
+        .shake-animation {
+            animation: shake 0.4s ease-in-out;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-8px); }
+            40%, 80% { transform: translateX(8px); }
+        }
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
@@ -107,7 +116,6 @@
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-purple-500 selection:text-white">
 
-    <!-- HEADER & NAVBAR -->
     <header class="sticky top-0 z-40 glass-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
@@ -123,7 +131,7 @@
                             <h1 class="text-xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-cyan-300">
                                 SMAN 4 MANADO
                             </h1>
-                            <span class="px-2 py-0.5 text-[10px] font-bold tracking-widest text-cyan-300 bg-cyan-950/80 border border-cyan-500/30 rounded-full uppercase">LIT-HUB v2.0</span>
+                            <span class="px-2 py-0.5 text-[10px] font-bold tracking-widest text-cyan-300 bg-cyan-950/80 border border-cyan-500/30 rounded-full uppercase">LIT-HUB v2.5</span>
                         </div>
                         <p class="text-xs text-slate-400 font-medium">Gen Z Smart Library & Literacy Center</p>
                     </div>
@@ -148,10 +156,10 @@
                 <!-- Admin / Siswa Role Switcher & Action -->
                 <div class="flex items-center gap-3">
                     <div class="flex items-center bg-slate-900 border border-slate-800 p-1 rounded-xl">
-                        <button onclick="setRole('siswa')" id="role-siswa" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all text-white bg-purple-600">
+                        <button onclick="requestRoleSwitch('siswa')" id="role-siswa" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all text-white bg-purple-600">
                             <i class="fa-solid fa-user-graduate mr-1"></i> Siswa
                         </button>
-                        <button onclick="setRole('admin')" id="role-admin" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-400 hover:text-white">
+                        <button onclick="requestRoleSwitch('admin')" id="role-admin" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-400 hover:text-white">
                             <i class="fa-solid fa-user-gear mr-1"></i> Admin
                         </button>
                     </div>
@@ -181,11 +189,10 @@
         </div>
     </header>
 
-    <!-- MAIN CONTENT CONTAINER -->
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
         <!-- GLOBAL ROLE BADGE NOTICE -->
-        <div class="mb-6 flex items-center justify-between bg-slate-900/60 border border-slate-800 rounded-2xl p-4 backdrop-blur-sm">
+        <div class="mb-6 flex items-center justify-between bg-slate-900/60 border border-slate-800 rounded-2xl p-4 backdrop-blur-sm flex-wrap gap-3">
             <div class="flex items-center gap-3">
                 <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></div>
                 <p class="text-xs text-slate-300 font-medium">
@@ -199,10 +206,12 @@
                 <button onclick="openModal('modal-tambah-pinjaman')" class="px-3 py-1.5 text-xs font-bold bg-cyan-600/80 hover:bg-cyan-600 text-white rounded-lg border border-cyan-400/30 transition flex items-center gap-1.5">
                     <i class="fa-solid fa-hand-holding-hand"></i> + Catat Pinjam
                 </button>
+                <button onclick="logoutAdmin()" class="px-3 py-1.5 text-xs font-bold bg-rose-600/80 hover:bg-rose-600 text-white rounded-lg border border-rose-400/30 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-right-from-bracket"></i> Keluar Admin
+                </button>
             </div>
         </div>
 
-        <!-- ================= TAB 1: KATALOG & BUKU BARU ================= -->
         <section id="tab-katalog" class="tab-content space-y-8">
             <!-- Hero Banner -->
             <div class="relative overflow-hidden glass-card rounded-3xl p-8 border border-purple-500/20 bg-gradient-to-r from-purple-950/40 via-slate-900/80 to-cyan-950/40">
@@ -234,7 +243,7 @@
                 </div>
             </div>
 
-            <!-- Tabel Pengumuman Buku Baru (Admin Managed / Canva Sync Concept) -->
+            <!-- Tabel Pengumuman Buku Baru (Admin Managed / Canva Sheet Sync Concept) -->
             <div class="glass-card rounded-2xl p-6">
                 <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
                     <div>
@@ -284,7 +293,6 @@
             </div>
         </section>
 
-        <!-- ================= TAB 2: PEMINJAMAN & TAGIHAN WA ================= -->
         <section id="tab-peminjaman" class="tab-content space-y-6 hidden">
             <!-- Header Section -->
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 glass-card rounded-2xl p-6 border-l-4 border-l-cyan-500">
@@ -293,7 +301,7 @@
                         <i class="fa-solid fa-stopwatch text-cyan-400"></i> Progres Peminjaman & Pengingat WA
                     </h2>
                     <p class="text-slate-400 text-xs mt-1">
-                        Pantau sisa hari pinjaman. Pengingat WhatsApp otomatis aktif jika jatuh tempo ≤ 2 hari (H-2).
+                        Pantau sisa hari pinjaman. Admin dapat mengirim draf pesan pengingat WhatsApp jika jatuh tempo ≤ 2 hari (H-2).
                     </p>
                 </div>
                 <div class="flex items-center gap-3">
@@ -310,8 +318,7 @@
                     <input type="text" id="search-pinjam" onkeyup="renderPeminjaman()" placeholder="Cari nama siswa, NISN, atau judul buku..." class="w-full bg-slate-900/80 border border-slate-800 rounded-xl pl-11 pr-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500">
                 </div>
                 <select id="filter-status-pinjam" onchange="renderPeminjaman()" class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-cyan-500">
-                    <value value="semua">Semua Status Peminjaman</value>
-                    <option value="semua">Semua Status</option>
+                    <option value="semua">Semua Status Peminjaman</option>
                     <option value="h2">🚨 Segera Jatuh Tempo (≤ H-2)</option>
                     <option value="terlambat">⚠️ Terlambat</option>
                     <option value="aman">✅ Masih Aman (> 2 hari)</option>
@@ -324,7 +331,6 @@
             </div>
         </section>
 
-        <!-- ================= TAB 3: PROGRAM DUTA LITERASI ================= -->
         <section id="tab-duta" class="tab-content space-y-8 hidden">
             <!-- Banner Utama Duta Literasi -->
             <div class="relative rounded-3xl p-8 glass-card border border-amber-500/30 overflow-hidden bg-gradient-to-r from-amber-950/40 via-slate-900 to-purple-950/40">
@@ -342,25 +348,28 @@
                         
                         <!-- Benefit Highlights Grid -->
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
-                                <div class="text-amber-400 text-lg mb-1"><i class="fa-solid fa-ribbon"></i></div>
+                            <div class="p-3.5 rounded-xl bg-slate-950/80 border border-amber-500/20 hover:border-amber-500/40 transition">
+                                <div class="text-amber-400 text-xl mb-1"><i class="fa-solid fa-ribbon"></i></div>
                                 <h4 class="text-xs font-bold text-white">Slempang Kehormatan</h4>
-                                <p class="text-[11px] text-slate-400 mt-0.5">Dipakai resmi di acara penting sekolah & dinas.</p>
+                                <p class="text-[11px] text-slate-400 mt-0.5">Dipakai resmi di acara penting sekolah, dinas, & upacara.</p>
                             </div>
-                            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
-                                <div class="text-purple-400 text-lg mb-1"><i class="fa-solid fa-certificate"></i></div>
+                            <div class="p-3.5 rounded-xl bg-slate-950/80 border border-purple-500/20 hover:border-purple-500/40 transition">
+                                <div class="text-purple-400 text-xl mb-1"><i class="fa-solid fa-certificate"></i></div>
                                 <h4 class="text-xs font-bold text-white">Sertifikat Resmi</h4>
-                                <p class="text-[11px] text-slate-400 mt-0.5">Diberikan di akhir masa jabatan resmi.</p>
+                                <p class="text-[11px] text-slate-400 mt-0.5">Sertifikat Kepala Sekolah diserahkan di akhir jabatan.</p>
                             </div>
-                            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
-                                <div class="text-emerald-400 text-lg mb-1"><i class="fa-solid fa-money-bill-wave"></i></div>
+                            <div class="p-3.5 rounded-xl bg-slate-950/80 border border-emerald-500/20 hover:border-emerald-500/40 transition">
+                                <div class="text-emerald-400 text-xl mb-1"><i class="fa-solid fa-money-bill-wave"></i></div>
                                 <h4 class="text-xs font-bold text-white">Insentif Tunai</h4>
                                 <p class="text-[11px] text-slate-400 mt-0.5">Rp 50.000,- / orang (Maksimal 2 orang Duta Terpilih).</p>
                             </div>
                         </div>
 
-                        <div class="text-xs text-amber-200/80 bg-amber-950/30 p-2.5 rounded-lg border border-amber-500/20 inline-block">
-                            📌 <strong>Catatan Masa Jabatan:</strong> Duta Literasi menjabat selama <strong>2 bulan</strong> setelah dilantik. Sertifikat & Insentif tunai diserahkan di akhir masa jabatan.
+                        <div class="text-xs text-amber-200/90 bg-amber-950/40 p-3 rounded-xl border border-amber-500/30 flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-info text-amber-400 text-sm mt-0.5"></i>
+                            <div>
+                                <strong>Catatan Masa Jabatan:</strong> Duta Literasi terpilih akan menjabat selama <strong>2 bulan</strong> setelah dilantik. Sertifikat & Insentif tunai diserahkan secara resmi di akhir masa jabatan.
+                            </div>
                         </div>
                     </div>
 
@@ -370,8 +379,8 @@
                             <i class="fa-solid fa-crown"></i>
                         </div>
                         <div>
-                            <h3 class="font-bold text-white">Siap Menginspirasi?</h3>
-                            <p class="text-xs text-slate-400 mt-1">Isi formulir pendaftaran & jawab 3 pertanyaan wawancara umum.</p>
+                            <h3 class="font-bold text-white text-lg">Siap Menginspirasi?</h3>
+                            <p class="text-xs text-slate-400 mt-1">Isi formulir pendaftaran & jawab 3 pertanyaan wawancara umum online.</p>
                         </div>
                         <button onclick="openModal('modal-daftar-duta')" class="w-full py-3 px-4 rounded-xl font-extrabold text-xs text-slate-950 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 hover:brightness-110 shadow-lg neon-glow-btn transition uppercase tracking-wider">
                             <i class="fa-solid fa-pen-nib mr-1"></i> Daftar Duta Literasi Sekarang
@@ -383,23 +392,23 @@
             <!-- Timeline Pendaftaran -->
             <div class="glass-card rounded-2xl p-6">
                 <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-calendar-days text-amber-400"></i> Timeline Sesi Seleksi
+                    <i class="fa-solid fa-calendar-days text-amber-400"></i> Timeline & Tahapan Seleksi
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div class="p-4 rounded-xl bg-slate-900/80 border-l-4 border-l-amber-500 border border-slate-800">
                         <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">Tahap 1</span>
-                        <h4 class="font-bold text-white text-sm mt-2">Masa Pendaftaran Online</h4>
-                        <p class="text-xs text-slate-400 mt-1">Berlangsung 1 Minggu penuh di bulan berjalan melalui form web ini.</p>
+                        <h4 class="font-bold text-white text-sm mt-2">Pendaftaran Online (1 Minggu)</h4>
+                        <p class="text-xs text-slate-400 mt-1">Pengisian formulir identitas & jawaban 3 pertanyaan wawancara umum.</p>
                     </div>
                     <div class="p-4 rounded-xl bg-slate-900/80 border-l-4 border-l-purple-500 border border-slate-800">
                         <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">Tahap 2</span>
-                        <h4 class="font-bold text-white text-sm mt-2">Sesi Pengumpulan Tugas</h4>
-                        <p class="text-xs text-slate-400 mt-1">Calon mengunggah resume buku favorit & karya konten promosi literasi.</p>
+                        <h4 class="font-bold text-white text-sm mt-2">Pengumpulan Tugas Mini</h4>
+                        <p class="text-xs text-slate-400 mt-1">Mengunggah resensi buku singkat & promosi literasi di sosial media.</p>
                     </div>
                     <div class="p-4 rounded-xl bg-slate-900/80 border-l-4 border-l-cyan-500 border border-slate-800">
                         <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300">Tahap 3</span>
                         <h4 class="font-bold text-white text-sm mt-2">Wawancara & Pelantikan</h4>
-                        <p class="text-xs text-slate-400 mt-1">Pendalaman 3 pertanyaan wawancara umum & penentuan 2 Duta Terpilih.</p>
+                        <p class="text-xs text-slate-400 mt-1">Verifikasi jawaban wawancara & penetapan Maksimal 2 Duta Terpilih.</p>
                     </div>
                 </div>
             </div>
@@ -438,7 +447,6 @@
             </div>
         </section>
 
-        <!-- ================= TAB 4: KELOLA ANGGOTA ================= -->
         <section id="tab-anggota" class="tab-content space-y-6 hidden">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 glass-card rounded-2xl p-6 border-l-4 border-l-emerald-500">
                 <div>
@@ -483,6 +491,47 @@
     </main>
 
     <!-- MODALS SECTION -->
+
+    <!-- MODAL 0: Admin Password Login Modal -->
+    <div id="modal-login-admin" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md hidden">
+        <div id="admin-login-card" class="glass-card max-w-md w-full rounded-3xl p-6 border border-purple-500/40 space-y-4 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-2">
+                    <div class="w-9 h-9 rounded-xl bg-purple-600/30 border border-purple-400/40 flex items-center justify-center text-purple-400">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Otentikasi Mode Admin</h3>
+                </div>
+                <button onclick="closeModal('modal-login-admin')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            
+            <p class="text-xs text-slate-300 leading-relaxed">
+                Fitur ini dilindungi! Masukkan kata sandi administrator untuk mengelola data buku, peminjaman, dan pesan pengingat WA.
+            </p>
+
+            <form id="form-login-admin" onsubmit="verifyAdminPassword(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Password Admin</label>
+                    <div class="relative">
+                        <input type="password" id="admin-password-input" required placeholder="Masukkan password admin..." class="w-full bg-slate-900 border border-slate-800 rounded-xl pl-3.5 pr-10 py-2.5 text-sm text-white focus:border-purple-500 focus:outline-none transition">
+                        <button type="button" onclick="togglePasswordVisibility()" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-200">
+                            <i id="eye-icon" class="fa-solid fa-eye text-xs"></i>
+                        </button>
+                    </div>
+                    <div id="admin-error-msg" class="hidden mt-2 text-xs text-rose-400 font-medium flex items-center gap-1.5">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Password salah! Silakan coba lagi.
+                    </div>
+                </div>
+
+                <div class="pt-2 flex justify-end gap-2">
+                    <button type="button" onclick="closeModal('modal-login-admin')" class="px-4 py-2 text-xs font-semibold text-slate-400 hover:text-white">Batal</button>
+                    <button type="submit" class="px-5 py-2.5 text-xs font-bold bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white rounded-xl shadow-lg transition flex items-center gap-2">
+                        <i class="fa-solid fa-key"></i> Masuk Mode Admin
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- MODAL 1: Tambah Buku Baru (Admin) -->
     <div id="modal-tambah-buku" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
@@ -701,7 +750,6 @@
         </div>
     </div>
 
-    <!-- JAVASCRIPT APP LOGIC -->
     <script>
         // Default Mock Data generator for SMAN 4 Manado
         const DEFAULT_BUKU = [
@@ -765,9 +813,6 @@
         const dateCritical = new Date(today);
         dateCritical.setDate(today.getDate() + 1); // Tomorrow (H-1)
 
-        const dateH2 = new Date(today);
-        dateH2.setDate(today.getDate() + 2); // In 2 days (H-2)
-
         const dateSafe = new Date(today);
         dateSafe.setDate(today.getDate() + 6); // In 6 days (Aman)
 
@@ -824,11 +869,65 @@
 
         // Application State
         let currentRole = 'siswa'; // 'siswa' or 'admin'
+        let isAdminAuthenticated = false;
         let currentTab = 'katalog';
         let bukuData = [];
         let anggotaData = [];
         let peminjamanData = [];
         let dutaData = [];
+
+        // ADMIN AUTHENTICATION
+        const ADMIN_PASSWORD_VALID = "glendy2108";
+
+        function requestRoleSwitch(targetRole) {
+            if (targetRole === 'admin') {
+                if (isAdminAuthenticated) {
+                    setRole('admin');
+                } else {
+                    document.getElementById('admin-password-input').value = '';
+                    document.getElementById('admin-error-msg').classList.add('hidden');
+                    openModal('modal-login-admin');
+                }
+            } else {
+                setRole('siswa');
+            }
+        }
+
+        function verifyAdminPassword(e) {
+            e.preventDefault();
+            const passwordInput = document.getElementById('admin-password-input').value;
+            const errorMsg = document.getElementById('admin-error-msg');
+            const card = document.getElementById('admin-login-card');
+
+            if (passwordInput === ADMIN_PASSWORD_VALID) {
+                isAdminAuthenticated = true;
+                closeModal('modal-login-admin');
+                setRole('admin');
+                showToast('🔑 Login Admin Berhasil! Selamat bekerja Admin.');
+            } else {
+                errorMsg.classList.remove('hidden');
+                card.classList.add('shake-animation');
+                setTimeout(() => card.classList.remove('shake-animation'), 400);
+            }
+        }
+
+        function togglePasswordVisibility() {
+            const pwdInput = document.getElementById('admin-password-input');
+            const eyeIcon = document.getElementById('eye-icon');
+            if (pwdInput.type === 'password') {
+                pwdInput.type = 'text';
+                eyeIcon.className = 'fa-solid fa-eye-slash text-xs';
+            } else {
+                pwdInput.type = 'password';
+                eyeIcon.className = 'fa-solid fa-eye text-xs';
+            }
+        }
+
+        function logoutAdmin() {
+            isAdminAuthenticated = false;
+            setRole('siswa');
+            showToast('Telah keluar dari mode Admin');
+        }
 
         // Initialize Application Data
         function initApp() {
@@ -859,7 +958,7 @@
             localStorage.setItem('sman4_duta', JSON.stringify(dutaData));
         }
 
-        // Switch Role Functionality
+        // Switch Role Functionality UI Renderer
         function setRole(role) {
             currentRole = role;
             const btnSiswa = document.getElementById('role-siswa');
@@ -889,7 +988,7 @@
                 // Hide admin elements
                 document.querySelectorAll('.admin-only').forEach(el => el.classList.add('hidden'));
             }
-            showToast(`Beralih ke mode ${role.toUpperCase()}`);
+            renderPeminjaman();
         }
 
         // Switch Active Navigation Tab
@@ -1129,12 +1228,16 @@
                             No. WA: <span class="text-slate-200 font-mono">${p.wa}</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <a href="${waUrl}" target="_blank" class="px-4 py-2 text-xs font-bold rounded-xl text-white bg-emerald-600 hover:bg-emerald-500 shadow-lg flex items-center gap-1.5 transition ${isCritical ? 'ring-2 ring-emerald-400 ring-offset-2 ring-offset-slate-950' : ''}">
-                                <i class="fa-brands fa-whatsapp text-sm"></i> Kirim Pengingat WA
-                            </a>
-                            <button onclick="kembalikanBuku('${p.id}')" class="admin-only ${currentRole==='admin'?'':'hidden'} px-3 py-2 text-xs font-bold rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition">
-                                <i class="fa-solid fa-check mr-1"></i> Selesai / Kembalikan
-                            </button>
+                            ${currentRole === 'admin' ? `
+                                <a href="${waUrl}" target="_blank" class="px-4 py-2 text-xs font-bold rounded-xl text-white bg-emerald-600 hover:bg-emerald-500 shadow-lg flex items-center gap-1.5 transition ${isCritical ? 'ring-2 ring-emerald-400 ring-offset-2 ring-offset-slate-950' : ''}">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i> Kirim Pengingat WA
+                                </a>
+                                <button onclick="kembalikanBuku('${p.id}')" class="px-3 py-2 text-xs font-bold rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition">
+                                    <i class="fa-solid fa-check mr-1"></i> Selesai / Kembalikan
+                                </button>
+                            ` : `
+                                <span class="text-[11px] text-slate-400 italic">Diingatkan via Sistem Perpus</span>
+                            `}
                         </div>
                     </div>
                 `;
@@ -1197,7 +1300,6 @@
             }
 
             filtered.forEach(a => {
-                // Count active loans for this member
                 const activeLoans = peminjamanData.filter(p => p.nisn === a.nisn).length;
 
                 const tr = document.createElement('tr');
@@ -1366,9 +1468,13 @@
         function pinjamBukuCepat(bukuId) {
             const buku = bukuData.find(b => b.id === bukuId);
             if (buku) {
-                openModal('modal-tambah-pinjaman');
-                const selectBuku = document.getElementById('pinjam-buku-select');
-                if (selectBuku) selectBuku.value = bukuId;
+                if (currentRole === 'admin') {
+                    openModal('modal-tambah-pinjaman');
+                    const selectBuku = document.getElementById('pinjam-buku-select');
+                    if (selectBuku) selectBuku.value = bukuId;
+                } else {
+                    showToast('Siswa dapat mendatangi pustakawan untuk mencatatkan peminjaman!');
+                }
             }
         }
 
