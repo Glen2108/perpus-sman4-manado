@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perpustakaan SMAN 4 Manado - Gen Z Digital Hub</title>
+    <title>Perpustakaan SMAN 4 Manado - #PerpustakaanKeren Gen Z Digital Hub</title>
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -25,7 +26,8 @@
                             pink: '#ec4899',
                             cyan: '#06b6d4',
                             emerald: '#10b981',
-                            amber: '#f59e0b'
+                            amber: '#f59e0b',
+                            rose: '#f43f5e'
                         }
                     },
                     fontFamily: {
@@ -42,44 +44,38 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #0b0f19;
+            background-color: #080c14;
             color: #f3f4f6;
             background-image: 
-                radial-gradient(at 10% 10%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
-                radial-gradient(at 90% 20%, rgba(6, 182, 212, 0.15) 0px, transparent 50%),
-                radial-gradient(at 50% 80%, rgba(236, 72, 153, 0.1) 0px, transparent 50%);
+                radial-gradient(at 0% 0%, rgba(168, 85, 247, 0.18) 0px, transparent 40%),
+                radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.18) 0px, transparent 40%),
+                radial-gradient(at 50% 100%, rgba(236, 72, 153, 0.12) 0px, transparent 50%);
             background-attachment: fixed;
         }
 
         .glass-card {
-            background: rgba(17, 24, 39, 0.7);
+            background: rgba(15, 23, 42, 0.75);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
         }
 
         .glass-nav {
-            background: rgba(11, 15, 25, 0.85);
+            background: rgba(8, 12, 20, 0.88);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .neon-border-purple {
-            box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
-            border-color: rgba(168, 85, 247, 0.5);
-        }
-
-        .neon-glow-btn {
+        .neon-glow-cyan {
             box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
-            transition: all 0.3s ease;
         }
-        .neon-glow-btn:hover {
-            box-shadow: 0 0 25px rgba(6, 182, 212, 0.7);
-            transform: translateY(-2px);
+        
+        .neon-glow-purple {
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
         }
 
-        .pulse-h2 {
+        .pulse-warning {
             animation: pulse-red 1.8s infinite;
         }
         @keyframes pulse-red {
@@ -88,203 +84,166 @@
             100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
         }
 
-        .shake-animation {
-            animation: shake 0.4s ease-in-out;
-        }
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            20%, 60% { transform: translateX(-8px); }
-            40%, 80% { transform: translateX(8px); }
-        }
-
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #0b0f19;
+            background: #080c14;
         }
         ::-webkit-scrollbar-thumb {
-            background: #1f2937;
+            background: #1e293b;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #374151;
+            background: #334155;
         }
     </style>
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-purple-500 selection:text-white">
 
+    <!-- HEADER & LOGO SECTION -->
     <header class="sticky top-0 z-40 glass-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Brand Logo & Title -->
+            <div class="flex items-center justify-between h-24 gap-4">
+                
+                <!-- Left: Logo SMAN 4 Manado -->
                 <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-600 via-pink-500 to-cyan-400 p-[2px] flex items-center justify-center shadow-lg">
-                        <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
-                            <i class="fa-solid font-bold fa-book-bookmark text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 text-xl"></i>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-2">
-                            <h1 class="text-xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-cyan-300">
-                                SMAN 4 MANADO
-                            </h1>
-                            <span class="px-2 py-0.5 text-[10px] font-bold tracking-widest text-cyan-300 bg-cyan-950/80 border border-cyan-500/30 rounded-full uppercase">LIT-HUB v2.5</span>
-                        </div>
-                        <p class="text-xs text-slate-400 font-medium">Gen Z Smart Library & Literacy Center</p>
+                    <div class="w-14 h-14 rounded-2xl bg-slate-900 border border-slate-700/80 p-1.5 flex items-center justify-center shadow-lg flex-shrink-0">
+                        <img src="SMA 4 Manado.png" alt="Logo SMAN 4 Manado" class="w-full h-full object-contain" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\"fa-solid fa-school text-cyan-400 text-2xl\"></i>';">
                     </div>
                 </div>
 
-                <!-- Nav Links (Desktop) -->
-                <nav class="hidden lg:flex items-center gap-1 bg-slate-900/80 p-1.5 rounded-2xl border border-slate-800">
-                    <button onclick="switchTab('katalog')" id="nav-katalog" class="nav-btn px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200 flex items-center gap-2 text-white bg-gradient-to-r from-purple-600 to-cyan-600 shadow-md">
-                        <i class="fa-solid fa-book-open text-xs"></i> Katalog & Buku Baru
+                <!-- Center Title & Tagline -->
+                <div class="text-center flex-grow">
+                    <h1 class="text-lg sm:text-2xl font-black tracking-tight text-white uppercase bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-white to-purple-400">
+                        PERPUSTAKAAN SMA NEGERI 4 MANADO
+                    </h1>
+                    <div class="mt-1 flex items-center justify-center gap-2 flex-wrap">
+                        <span class="px-3 py-0.5 text-[11px] font-extrabold tracking-wider text-purple-300 bg-purple-950/80 border border-purple-500/40 rounded-full shadow-inner">
+                            #PerpustakaanKeren
+                        </span>
+                        <span class="px-3 py-0.5 text-[11px] font-extrabold tracking-wider text-cyan-300 bg-cyan-950/80 border border-cyan-500/40 rounded-full shadow-inner">
+                            Gen Z Digital Hub
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Right: Logo Perpustakaan & Auth Controls -->
+                <div class="flex items-center gap-3">
+                    <div class="w-14 h-14 rounded-2xl bg-slate-900 border border-slate-700/80 p-1.5 flex items-center justify-center shadow-lg flex-shrink-0">
+                        <img src="LOGO_PERPUSTAKAAN.png" alt="Logo Perpustakaan" class="w-full h-full object-contain" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\"fa-solid fa-book-bookmark text-purple-400 text-2xl\"></i>';">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- NAVIGATION TAB BAR -->
+        <div class="border-t border-slate-800/80 bg-slate-950/60 px-4 py-2">
+            <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 overflow-x-auto">
+                <nav class="flex items-center gap-1.5">
+                    <button onclick="switchTab('katalog')" id="nav-katalog" class="nav-btn px-4 py-2 text-xs font-bold rounded-xl transition-all duration-200 flex items-center gap-2 text-white bg-gradient-to-r from-purple-600 to-cyan-600 shadow">
+                        <i class="fa-solid fa-book-open"></i> Katalog Utama
                     </button>
-                    <button onclick="switchTab('peminjaman')" id="nav-peminjaman" class="nav-btn px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200 flex items-center gap-2 text-slate-400 hover:text-white hover:bg-slate-800/60">
-                        <i class="fa-solid fa-clock-rotate-left text-xs"></i> Peminjaman & WA
+                    <button onclick="switchTab('anggota')" id="nav-anggota" class="nav-btn px-4 py-2 text-xs font-bold rounded-xl transition-all duration-200 flex items-center gap-2 text-slate-400 hover:text-white hover:bg-slate-800/60">
+                        <i class="fa-solid fa-users"></i> Anggota & Leaderboard
                     </button>
-                    <button onclick="switchTab('duta')" id="nav-duta" class="nav-btn px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200 flex items-center gap-2 text-slate-400 hover:text-white hover:bg-slate-800/60">
-                        <i class="fa-solid fa-crown text-xs text-amber-400"></i> Duta Literasi
+                    <button onclick="switchTab('duta')" id="nav-duta" class="nav-btn px-4 py-2 text-xs font-bold rounded-xl transition-all duration-200 flex items-center gap-2 text-slate-400 hover:text-white hover:bg-slate-800/60">
+                        <i class="fa-solid fa-crown text-amber-400"></i> Duta Literasi
                     </button>
-                    <button onclick="switchTab('anggota')" id="nav-anggota" class="nav-btn px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200 flex items-center gap-2 text-slate-400 hover:text-white hover:bg-slate-800/60">
-                        <i class="fa-solid fa-users text-xs"></i> Data Anggota
+                    <button onclick="switchTab('pinjaman-siswa')" id="nav-pinjaman-siswa" class="nav-btn px-4 py-2 text-xs font-bold rounded-xl transition-all duration-200 flex items-center gap-2 text-slate-400 hover:text-white hover:bg-slate-800/60">
+                        <i class="fa-solid fa-clock-rotate-left"></i> Status Pinjaman Saya
+                    </button>
+                    <button onclick="openAdminModal()" id="nav-admin" class="nav-btn px-4 py-2 text-xs font-bold rounded-xl transition-all duration-200 flex items-center gap-2 text-amber-300 bg-amber-950/40 border border-amber-500/40 hover:bg-amber-900/60">
+                        <i class="fa-solid fa-user-shield text-amber-400"></i> Admin Active
                     </button>
                 </nav>
 
-                <!-- Admin / Siswa Role Switcher & Action -->
-                <div class="flex items-center gap-3">
-                    <div class="flex items-center bg-slate-900 border border-slate-800 p-1 rounded-xl">
-                        <button onclick="requestRoleSwitch('siswa')" id="role-siswa" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all text-white bg-purple-600">
-                            <i class="fa-solid fa-user-graduate mr-1"></i> Siswa
-                        </button>
-                        <button onclick="requestRoleSwitch('admin')" id="role-admin" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-400 hover:text-white">
-                            <i class="fa-solid fa-user-gear mr-1"></i> Admin
-                        </button>
+                <!-- Auth Buttons -->
+                <div class="flex items-center gap-2 flex-shrink-0">
+                    <div id="logged-user-chip" class="hidden items-center gap-2 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-xl text-xs">
+                        <i class="fa-solid fa-circle-user text-cyan-400"></i>
+                        <span id="logged-user-name" class="font-bold text-white">Siswa</span>
+                        <button onclick="logoutSiswa()" class="ml-1 text-slate-400 hover:text-rose-400"><i class="fa-solid fa-right-from-bracket"></i></button>
                     </div>
+                    <button id="btn-login-siswa" onclick="openModal('modal-login-siswa')" class="px-4 py-2 text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl shadow transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-right-to-bracket"></i> Login Siswa
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-                    <!-- Mobile Menu Button -->
-                    <button onclick="toggleMobileMenu()" class="lg:hidden text-slate-300 hover:text-white p-2 rounded-lg bg-slate-900 border border-slate-800">
-                        <i class="fa-solid fa-bars text-lg"></i>
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+        <!-- WELCOME BANNER FOR LOGGED IN SISWA -->
+        <div id="siswa-welcome-banner" class="hidden glass-card rounded-3xl p-6 border-l-8 border-l-cyan-400 bg-gradient-to-r from-slate-900 via-cyan-950/30 to-purple-950/30">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                    <span class="inline-block px-3 py-1 rounded-full text-[10px] font-extrabold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 mb-2">
+                        ✨ SESI SISWA AKTIF
+                    </span>
+                    <h2 class="text-xl sm:text-2xl font-black text-white" id="welcome-text">
+                        Selamat Datang! Mau pinjam buku apa hari ini?
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-1">
+                        Cek ketersediaan buku, ajukan peminjaman, atau daftarkan dirimu sebagai calon Duta Literasi sekolah!
+                    </p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="switchTab('katalog')" class="px-4 py-2.5 text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl shadow transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-magnifying-glass"></i> Cari & Pinjam Buku
+                    </button>
+                    <button onclick="switchTab('duta'); openModal('modal-daftar-duta')" class="px-4 py-2.5 text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl shadow transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-crown"></i> Daftar Duta
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Nav Menu Drawer -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-slate-950/95 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
-            <button onclick="switchTab('katalog'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center gap-3 text-slate-300 hover:bg-slate-900">
-                <i class="fa-solid fa-book-open text-purple-400"></i> Katalog & Buku Baru
-            </button>
-            <button onclick="switchTab('peminjaman'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center gap-3 text-slate-300 hover:bg-slate-900">
-                <i class="fa-solid fa-clock-rotate-left text-cyan-400"></i> Peminjaman & WA Pengingat
-            </button>
-            <button onclick="switchTab('duta'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center gap-3 text-slate-300 hover:bg-slate-900">
-                <i class="fa-solid fa-crown text-amber-400"></i> Program Duta Literasi
-            </button>
-            <button onclick="switchTab('anggota'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center gap-3 text-slate-300 hover:bg-slate-900">
-                <i class="fa-solid fa-users text-emerald-400"></i> Kelola Anggota
-            </button>
-        </div>
-    </header>
-
-    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-
-        <!-- GLOBAL ROLE BADGE NOTICE -->
-        <div class="mb-6 flex items-center justify-between bg-slate-900/60 border border-slate-800 rounded-2xl p-4 backdrop-blur-sm flex-wrap gap-3">
-            <div class="flex items-center gap-3">
-                <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></div>
-                <p class="text-xs text-slate-300 font-medium">
-                    Mode Aktif: <span id="current-role-badge" class="font-bold text-purple-400">Siswa Mode</span> — <span text-slate-400 id="role-desc">Jelajahi buku, cek jadwal peminjaman, & mendaftar Duta Literasi!</span>
-                </p>
-            </div>
-            <div id="admin-quick-actions" class="hidden flex items-center gap-2">
-                <button onclick="openModal('modal-tambah-buku')" class="px-3 py-1.5 text-xs font-bold bg-purple-600/80 hover:bg-purple-600 text-white rounded-lg border border-purple-400/30 transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-plus"></i> + Buku Baru
-                </button>
-                <button onclick="openModal('modal-tambah-pinjaman')" class="px-3 py-1.5 text-xs font-bold bg-cyan-600/80 hover:bg-cyan-600 text-white rounded-lg border border-cyan-400/30 transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-hand-holding-hand"></i> + Catat Pinjam
-                </button>
-                <button onclick="logoutAdmin()" class="px-3 py-1.5 text-xs font-bold bg-rose-600/80 hover:bg-rose-600 text-white rounded-lg border border-rose-400/30 transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-right-from-bracket"></i> Keluar Admin
-                </button>
-            </div>
-        </div>
-
-        <section id="tab-katalog" class="tab-content space-y-8">
-            <!-- Hero Banner -->
-            <div class="relative overflow-hidden glass-card rounded-3xl p-8 border border-purple-500/20 bg-gradient-to-r from-purple-950/40 via-slate-900/80 to-cyan-950/40">
-                <div class="relative z-10 max-w-2xl">
-                    <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30 mb-3">
-                        ✨ Update Koleksi Buku Terkini 2026
+        <!-- ================= TAB 1: KATALOG BUKU ================= -->
+        <section id="tab-katalog" class="tab-content space-y-6">
+            <!-- Hero Banner Katalog -->
+            <div class="relative overflow-hidden glass-card rounded-3xl p-8 border border-purple-500/20 bg-gradient-to-r from-purple-950/40 via-slate-900/90 to-cyan-950/40">
+                <div class="relative z-10 max-w-3xl space-y-4">
+                    <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                        📚 Koleksi Literasi SMAN 4 Manado
                     </span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
-                        Temukan Literasi Favoritmu di Perpustakaan SMAN 4 Manado
+                    <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                        Eksplorasi Ilmu Tanpa Batas di Hub Digital Perpustakaan
                     </h2>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                        Akses ribuan buku fisik & digital terbaru. Tambah wawasan, kumpulkan poin literasi, dan jadilah penerus Duta Literasi sekolah!
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        Cari buku pelajaran, fiksi, non-fiksi, dan referensi terbaru. Login sebagai siswa terdaftar untuk mengajukan pinjaman langsung secara online.
                     </p>
-                    <!-- Search & Filter Controls -->
-                    <div class="flex flex-col sm:flex-row gap-3">
+                    
+                    <!-- Search & Filters -->
+                    <div class="flex flex-col sm:flex-row gap-3 pt-2">
                         <div class="relative flex-grow">
-                            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                            <input type="text" id="search-buku" onkeyup="renderKatalog()" placeholder="Cari judul buku, pengarang, atau ISBN..." class="w-full bg-slate-950/80 border border-slate-700/80 rounded-xl pl-11 pr-4 py-3 text-sm text-white focus:outline-none focus:border-purple-500 transition">
+                            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                            <input type="text" id="search-buku" onkeyup="renderKatalog()" placeholder="Cari judul buku, pengarang, atau ISBN..." class="w-full bg-slate-950/80 border border-slate-700/80 rounded-xl pl-11 pr-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-cyan-400 transition">
                         </div>
-                        <select id="filter-kategori" onchange="renderKatalog()" class="bg-slate-950/80 border border-slate-700/80 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-purple-500 transition">
+                        <select id="filter-kategori-buku" onchange="renderKatalog()" class="bg-slate-950/80 border border-slate-700/80 rounded-xl px-4 py-3 text-xs sm:text-sm text-slate-200 focus:outline-none focus:border-cyan-400 transition">
                             <option value="semua">Semua Kategori</option>
-                            <option value="Fiksi">Fiksi & Novel</option>
-                            <option value="Sains">Sains & Teknologi</option>
-                            <option value="Sejarah">Sejarah & Budaya</option>
-                            <option value="Pengembangan">Self Improvement</option>
-                            <option value="Pelajaran">Buku Pelajaran SMA</option>
+                            <option value="Fiksi">Fiksi</option>
+                            <option value="Non-Fiksi">Non-Fiksi</option>
+                            <option value="Referensi">Referensi</option>
+                            <option value="Pelajaran">Pelajaran</option>
                         </select>
                     </div>
                 </div>
             </div>
 
-            <!-- Tabel Pengumuman Buku Baru (Admin Managed / Canva Sheet Sync Concept) -->
-            <div class="glass-card rounded-2xl p-6">
-                <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
-                    <div>
-                        <div class="flex items-center gap-2">
-                            <h3 class="text-lg font-bold text-white">🔥 Pengumuman Buku Baru Masuk</h3>
-                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-pink-500/20 text-pink-400 border border-pink-500/30">CANVA SHEET SYNC</span>
-                        </div>
-                        <p class="text-xs text-slate-400">Daftar buku yang baru di-upload admin tanpa batasan file berukuran besar</p>
-                    </div>
-                    <button onclick="openModal('modal-tambah-buku')" class="admin-only hidden px-4 py-2 text-xs font-bold bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-xl shadow-lg transition flex items-center gap-2">
-                        <i class="fa-solid fa-cloud-arrow-up"></i> Upload Buku Baru
-                    </button>
-                </div>
-
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-sm text-slate-300">
-                        <thead class="bg-slate-900/90 text-slate-400 text-xs uppercase font-bold tracking-wider border-b border-slate-800">
-                            <tr>
-                                <th class="p-3.5 rounded-l-xl">Buku & Sampul</th>
-                                <th class="p-3.5">Pengarang / Penerbit</th>
-                                <th class="p-3.5">Kategori</th>
-                                <th class="p-3.5">Tgl Rilis</th>
-                                <th class="p-3.5">Stok Tersedia</th>
-                                <th class="p-3.5 rounded-r-xl text-center">Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabel-buku-baru-body" class="divide-y divide-slate-800/60 font-medium">
-                            <!-- Populated via JS -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Grid Katalog Keseluruhan -->
+            <!-- Grid Katalog Buku -->
             <div>
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                        <i class="fa-solid fa-shapes text-cyan-400"></i> Koleksi Perpustakaan Utama
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-book-open-reader text-cyan-400"></i> Katalog Buku
                     </h3>
-                    <span id="katalog-count" class="text-xs font-semibold px-3 py-1 bg-slate-900 rounded-lg text-slate-400 border border-slate-800">
-                        Memuat data...
+                    <span id="katalog-count" class="text-xs font-bold px-3 py-1 bg-slate-900 rounded-lg text-slate-400 border border-slate-800">
+                        0 Buku
                     </span>
                 </div>
                 <div id="grid-katalog" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -293,191 +252,51 @@
             </div>
         </section>
 
-        <section id="tab-peminjaman" class="tab-content space-y-6 hidden">
-            <!-- Header Section -->
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 glass-card rounded-2xl p-6 border-l-4 border-l-cyan-500">
-                <div>
-                    <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                        <i class="fa-solid fa-stopwatch text-cyan-400"></i> Progres Peminjaman & Pengingat WA
-                    </h2>
-                    <p class="text-slate-400 text-xs mt-1">
-                        Pantau sisa hari pinjaman. Admin dapat mengirim draf pesan pengingat WhatsApp jika jatuh tempo ≤ 2 hari (H-2).
-                    </p>
-                </div>
-                <div class="flex items-center gap-3">
-                    <button onclick="openModal('modal-tambah-pinjaman')" class="admin-only hidden px-4 py-2.5 text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl shadow-lg transition flex items-center gap-2">
-                        <i class="fa-solid fa-plus-circle"></i> Catat Transaksi Pinjam
-                    </button>
-                </div>
-            </div>
-
-            <!-- Filter Status & Cari Pinjaman -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="relative md:col-span-2">
-                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                    <input type="text" id="search-pinjam" onkeyup="renderPeminjaman()" placeholder="Cari nama siswa, NISN, atau judul buku..." class="w-full bg-slate-900/80 border border-slate-800 rounded-xl pl-11 pr-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500">
-                </div>
-                <select id="filter-status-pinjam" onchange="renderPeminjaman()" class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-cyan-500">
-                    <option value="semua">Semua Status Peminjaman</option>
-                    <option value="h2">🚨 Segera Jatuh Tempo (≤ H-2)</option>
-                    <option value="terlambat">⚠️ Terlambat</option>
-                    <option value="aman">✅ Masih Aman (> 2 hari)</option>
-                </select>
-            </div>
-
-            <!-- List Card Peminjaman dengan Visual Progress Indicator -->
-            <div id="container-peminjaman" class="space-y-4">
-                <!-- Populated via JS -->
-            </div>
-        </section>
-
-        <section id="tab-duta" class="tab-content space-y-8 hidden">
-            <!-- Banner Utama Duta Literasi -->
-            <div class="relative rounded-3xl p-8 glass-card border border-amber-500/30 overflow-hidden bg-gradient-to-r from-amber-950/40 via-slate-900 to-purple-950/40">
-                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                    <div class="lg:col-span-2 space-y-4">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-extrabold bg-amber-500/20 text-amber-300 border border-amber-500/30">
-                            <i class="fa-solid fa-star text-amber-400"></i> OPEN RECRUITMENT DUTA LITERASI SMAN 4
-                        </div>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
-                            Jadilah Wajah Inspirasi Literasi SMAN 4 Manado!
-                        </h2>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            Ayo daftarkan dirimu sebagai calon Duta Literasi sekolah. Pendaftaran dibuka selama <strong class="text-amber-300">1 Minggu di bulan berjalan</strong>. Tunjukkan komitmenmu untuk menggerakkan budaya membaca bagi generasi muda Manado!
-                        </p>
-                        
-                        <!-- Benefit Highlights Grid -->
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                            <div class="p-3.5 rounded-xl bg-slate-950/80 border border-amber-500/20 hover:border-amber-500/40 transition">
-                                <div class="text-amber-400 text-xl mb-1"><i class="fa-solid fa-ribbon"></i></div>
-                                <h4 class="text-xs font-bold text-white">Slempang Kehormatan</h4>
-                                <p class="text-[11px] text-slate-400 mt-0.5">Dipakai resmi di acara penting sekolah, dinas, & upacara.</p>
-                            </div>
-                            <div class="p-3.5 rounded-xl bg-slate-950/80 border border-purple-500/20 hover:border-purple-500/40 transition">
-                                <div class="text-purple-400 text-xl mb-1"><i class="fa-solid fa-certificate"></i></div>
-                                <h4 class="text-xs font-bold text-white">Sertifikat Resmi</h4>
-                                <p class="text-[11px] text-slate-400 mt-0.5">Sertifikat Kepala Sekolah diserahkan di akhir jabatan.</p>
-                            </div>
-                            <div class="p-3.5 rounded-xl bg-slate-950/80 border border-emerald-500/20 hover:border-emerald-500/40 transition">
-                                <div class="text-emerald-400 text-xl mb-1"><i class="fa-solid fa-money-bill-wave"></i></div>
-                                <h4 class="text-xs font-bold text-white">Insentif Tunai</h4>
-                                <p class="text-[11px] text-slate-400 mt-0.5">Rp 50.000,- / orang (Maksimal 2 orang Duta Terpilih).</p>
-                            </div>
-                        </div>
-
-                        <div class="text-xs text-amber-200/90 bg-amber-950/40 p-3 rounded-xl border border-amber-500/30 flex items-start gap-2.5">
-                            <i class="fa-solid fa-circle-info text-amber-400 text-sm mt-0.5"></i>
-                            <div>
-                                <strong>Catatan Masa Jabatan:</strong> Duta Literasi terpilih akan menjabat selama <strong>2 bulan</strong> setelah dilantik. Sertifikat & Insentif tunai diserahkan secara resmi di akhir masa jabatan.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CTA Action Box -->
-                    <div class="glass-card p-6 rounded-2xl border border-amber-500/30 text-center space-y-4 bg-slate-950/80">
-                        <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-amber-500 to-purple-600 mx-auto flex items-center justify-center text-2xl text-white shadow-lg">
-                            <i class="fa-solid fa-crown"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-white text-lg">Siap Menginspirasi?</h3>
-                            <p class="text-xs text-slate-400 mt-1">Isi formulir pendaftaran & jawab 3 pertanyaan wawancara umum online.</p>
-                        </div>
-                        <button onclick="openModal('modal-daftar-duta')" class="w-full py-3 px-4 rounded-xl font-extrabold text-xs text-slate-950 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 hover:brightness-110 shadow-lg neon-glow-btn transition uppercase tracking-wider">
-                            <i class="fa-solid fa-pen-nib mr-1"></i> Daftar Duta Literasi Sekarang
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Timeline Pendaftaran -->
-            <div class="glass-card rounded-2xl p-6">
-                <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-calendar-days text-amber-400"></i> Timeline & Tahapan Seleksi
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="p-4 rounded-xl bg-slate-900/80 border-l-4 border-l-amber-500 border border-slate-800">
-                        <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">Tahap 1</span>
-                        <h4 class="font-bold text-white text-sm mt-2">Pendaftaran Online (1 Minggu)</h4>
-                        <p class="text-xs text-slate-400 mt-1">Pengisian formulir identitas & jawaban 3 pertanyaan wawancara umum.</p>
-                    </div>
-                    <div class="p-4 rounded-xl bg-slate-900/80 border-l-4 border-l-purple-500 border border-slate-800">
-                        <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">Tahap 2</span>
-                        <h4 class="font-bold text-white text-sm mt-2">Pengumpulan Tugas Mini</h4>
-                        <p class="text-xs text-slate-400 mt-1">Mengunggah resensi buku singkat & promosi literasi di sosial media.</p>
-                    </div>
-                    <div class="p-4 rounded-xl bg-slate-900/80 border-l-4 border-l-cyan-500 border border-slate-800">
-                        <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300">Tahap 3</span>
-                        <h4 class="font-bold text-white text-sm mt-2">Wawancara & Pelantikan</h4>
-                        <p class="text-xs text-slate-400 mt-1">Verifikasi jawaban wawancara & penetapan Maksimal 2 Duta Terpilih.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tabel Pendaftar Calon Duta Literasi -->
-            <div class="glass-card rounded-2xl p-6">
-                <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+        <!-- ================= TAB 2: ANGGOTA & LEADERBOARD ================= -->
+        <section id="tab-anggota" class="tab-content space-y-8 hidden">
+            <!-- LEADERBOARD PENGUNJUNG SERING BERKUNJUNG -->
+            <div class="glass-card rounded-3xl p-6 border border-amber-500/30 bg-gradient-to-r from-amber-950/30 via-slate-900 to-purple-950/30">
+                <div class="flex items-center justify-between mb-6 flex-wrap gap-2">
                     <div>
-                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                            <i class="fa-solid fa-list-check text-purple-400"></i> Tabel Pendaftar Calon Duta Literasi
-                        </h3>
-                        <p class="text-xs text-slate-400">Daftar siswa SMAN 4 Manado yang telah mendaftar di bulan ini</p>
+                        <h2 class="text-xl font-black text-white flex items-center gap-2">
+                            <i class="fa-solid fa-trophy text-amber-400"></i> Leaderboard Pengunjung Sering Berkunjung
+                        </h2>
+                        <p class="text-xs text-slate-400 mt-1">Siswa teraktif mengunjungi website & ruang perpustakaan bulan ini</p>
                     </div>
-                    <span id="duta-count-badge" class="px-3 py-1 bg-purple-500/20 border border-purple-500/30 text-purple-300 rounded-lg text-xs font-bold">
-                        0 Pendaftar
+                    <span class="px-3 py-1 text-xs font-extrabold bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full">
+                        🔥 Top Readers
                     </span>
                 </div>
-
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-sm text-slate-300">
-                        <thead class="bg-slate-900 text-slate-400 text-xs uppercase font-bold tracking-wider border-b border-slate-800">
-                            <tr>
-                                <th class="p-3.5 rounded-l-xl">Nama Calon Duta</th>
-                                <th class="p-3.5">NISN / Kelas</th>
-                                <th class="p-3.5">Kontak WA</th>
-                                <th class="p-3.5">Tanggal Daftar</th>
-                                <th class="p-3.5">Status Seleksi</th>
-                                <th class="p-3.5 rounded-r-xl text-center">Jawaban Wawancara</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabel-duta-body" class="divide-y divide-slate-800/60 font-medium">
-                            <!-- Populated via JS -->
-                        </tbody>
-                    </table>
+                
+                <div id="leaderboard-container" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Populated via JS -->
                 </div>
             </div>
-        </section>
 
-        <section id="tab-anggota" class="tab-content space-y-6 hidden">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 glass-card rounded-2xl p-6 border-l-4 border-l-emerald-500">
-                <div>
-                    <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                        <i class="fa-solid fa-users text-emerald-400"></i> Direktori Anggota Perpustakaan
-                    </h2>
-                    <p class="text-slate-400 text-xs mt-1">Data siswa terdaftar sebagai anggota aktif SMAN 4 Manado Literacy Hub</p>
+            <!-- PUBLIC ANGGOTA DIRECTORY -->
+            <div class="glass-card rounded-3xl p-6 space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-address-book text-emerald-400"></i> Direktori Anggota Perpustakaan
+                        </h3>
+                        <p class="text-xs text-slate-400">Daftar anggota terdaftar beserta status keanggotaan</p>
+                    </div>
+                    <div class="relative w-full sm:w-64">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                        <input type="text" id="search-anggota" onkeyup="renderAnggota()" placeholder="Cari NISN, nama, kelas..." class="w-full bg-slate-900 border border-slate-800 rounded-xl pl-9 pr-4 py-2 text-xs text-white focus:outline-none focus:border-emerald-400">
+                    </div>
                 </div>
-                <button onclick="openModal('modal-tambah-anggota')" class="admin-only hidden px-4 py-2.5 text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl shadow-lg transition flex items-center gap-2 self-start sm:self-auto">
-                    <i class="fa-solid fa-user-plus"></i> Tambah Anggota Baru
-                </button>
-            </div>
 
-            <!-- Search Anggota -->
-            <div class="relative">
-                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <input type="text" id="search-anggota" onkeyup="renderAnggota()" placeholder="Cari berdasarkan nama anggota, NISN, atau kelas..." class="w-full bg-slate-900/80 border border-slate-800 rounded-xl pl-11 pr-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500">
-            </div>
-
-            <!-- Tabel Anggota -->
-            <div class="glass-card rounded-2xl p-6">
                 <div class="overflow-x-auto">
-                    <table class="w-full text-left text-sm text-slate-300">
-                        <thead class="bg-slate-900 text-slate-400 text-xs uppercase font-bold tracking-wider border-b border-slate-800">
+                    <table class="w-full text-left text-xs text-slate-300">
+                        <thead class="bg-slate-900/90 text-slate-400 uppercase font-extrabold border-b border-slate-800">
                             <tr>
-                                <th class="p-3.5 rounded-l-xl">Nama Siswa</th>
-                                <th class="p-3.5">NISN</th>
+                                <th class="p-3.5 rounded-l-xl">ID / NISN</th>
+                                <th class="p-3.5">Nama Siswa</th>
                                 <th class="p-3.5">Kelas</th>
-                                <th class="p-3.5">No. WhatsApp</th>
-                                <th class="p-3.5">Status Pinjaman Active</th>
-                                <th class="p-3.5 rounded-r-xl text-center">Aksi WA</th>
+                                <th class="p-3.5">Status Keanggotaan</th>
+                                <th class="p-3.5 rounded-r-xl text-center">Tingkat Kunjungan</th>
                             </tr>
                         </thead>
                         <tbody id="tabel-anggota-body" class="divide-y divide-slate-800/60 font-medium">
@@ -488,250 +307,514 @@
             </div>
         </section>
 
-    </main>
+        <!-- ================= TAB 3: DUTA LITERASI SHOWCASE ================= -->
+        <section id="tab-duta" class="tab-content space-y-8 hidden">
+            <!-- Showcase Duta Resmi yang Release -->
+            <div class="glass-card rounded-3xl p-8 border border-amber-500/40 bg-gradient-to-br from-amber-950/40 via-slate-900 to-purple-950/50 relative overflow-hidden">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+                    <div class="space-y-4 max-w-2xl">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                            <i class="fa-solid fa-crown text-amber-400"></i> DUTA LITERASI RESMI TERPILIH
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">
+                            Showcase Duta Literasi Bulan Berjalan
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Apresiasi tertinggi bagi siswa yang menginspirasi budaya membaca dan gerakan literasi digital di SMA Negeri 4 Manado!
+                        </p>
 
-    <!-- MODALS SECTION -->
-
-    <!-- MODAL 0: Admin Password Login Modal -->
-    <div id="modal-login-admin" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md hidden">
-        <div id="admin-login-card" class="glass-card max-w-md w-full rounded-3xl p-6 border border-purple-500/40 space-y-4 shadow-2xl">
-            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                <div class="flex items-center gap-2">
-                    <div class="w-9 h-9 rounded-xl bg-purple-600/30 border border-purple-400/40 flex items-center justify-center text-purple-400">
-                        <i class="fa-solid fa-lock"></i>
+                        <!-- Benefit Highlights -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                            <div class="p-3.5 rounded-2xl bg-slate-950/80 border border-amber-500/30 text-center space-y-1">
+                                <div class="text-amber-400 text-xl"><i class="fa-solid fa-ribbon"></i></div>
+                                <h4 class="text-xs font-bold text-white">Slempang Kehormatan</h4>
+                                <p class="text-[10px] text-slate-400">Dipakai resmi di agenda sekolah & dinas</p>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-950/80 border border-amber-500/30 text-center space-y-1">
+                                <div class="text-purple-400 text-xl"><i class="fa-solid fa-certificate"></i></div>
+                                <h4 class="text-xs font-bold text-white">Sertifikat Penghargaan</h4>
+                                <p class="text-[10px] text-slate-400">Sertifikat resmi akhir masa jabatan</p>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-950/80 border border-amber-500/30 text-center space-y-1">
+                                <div class="text-emerald-400 text-xl"><i class="fa-solid fa-coins"></i></div>
+                                <h4 class="text-xs font-bold text-white">Uang Tunai Rp 50.000,-</h4>
+                                <p class="text-[10px] text-slate-400">Insentif tunai bagi 2 Duta Terpilih</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-lg font-bold text-white">Otentikasi Mode Admin</h3>
-                </div>
-                <button onclick="closeModal('modal-login-admin')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
-            </div>
-            
-            <p class="text-xs text-slate-300 leading-relaxed">
-                Fitur ini dilindungi! Masukkan kata sandi administrator untuk mengelola data buku, peminjaman, dan pesan pengingat WA.
-            </p>
 
-            <form id="form-login-admin" onsubmit="verifyAdminPassword(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Password Admin</label>
-                    <div class="relative">
-                        <input type="password" id="admin-password-input" required placeholder="Masukkan password admin..." class="w-full bg-slate-900 border border-slate-800 rounded-xl pl-3.5 pr-10 py-2.5 text-sm text-white focus:border-purple-500 focus:outline-none transition">
-                        <button type="button" onclick="togglePasswordVisibility()" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-200">
-                            <i id="eye-icon" class="fa-solid fa-eye text-xs"></i>
+                    <!-- Action Box / Current Duta -->
+                    <div class="w-full lg:w-80 glass-card p-6 rounded-3xl border border-amber-500/40 text-center space-y-4 bg-slate-950/90 shadow-2xl">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-amber-400 via-purple-500 to-cyan-400 p-1 mx-auto shadow-lg">
+                            <div class="w-full h-full bg-slate-950 rounded-[12px] flex items-center justify-center text-3xl text-amber-300">
+                                <i class="fa-solid fa-user-graduate"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-[10px] uppercase font-extrabold text-amber-400 tracking-wider">Status Rilis Admin</span>
+                            <h3 class="text-lg font-black text-white mt-0.5" id="released-duta-name">Belum Diumumkan</h3>
+                            <p class="text-xs text-slate-400" id="released-duta-class">Pendaftaran Masih Dibuka</p>
+                        </div>
+                        <button onclick="handleDutaFormAction()" class="w-full py-3 px-4 rounded-xl font-extrabold text-xs text-slate-950 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 hover:brightness-110 transition shadow uppercase tracking-wider">
+                            <i class="fa-solid fa-pen-nib mr-1"></i> Form Pendaftaran Duta
                         </button>
                     </div>
-                    <div id="admin-error-msg" class="hidden mt-2 text-xs text-rose-400 font-medium flex items-center gap-1.5">
-                        <i class="fa-solid fa-triangle-exclamation"></i> Password salah! Silakan coba lagi.
+                </div>
+            </div>
+
+            <!-- Tabel Calon Duta Literasi -->
+            <div class="glass-card rounded-3xl p-6 space-y-4">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                    <div>
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-list-check text-purple-400"></i> Daftar Calon Duta Literasi Terdaftar
+                        </h3>
+                        <p class="text-xs text-slate-400">Usulan siswa yang mengikuti sesi seleksi & wawancara</p>
+                    </div>
+                    <span id="duta-count-badge" class="px-3 py-1 bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded-lg text-xs font-bold">
+                        0 Pendaftar
+                    </span>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs text-slate-300">
+                        <thead class="bg-slate-900 text-slate-400 uppercase font-extrabold border-b border-slate-800">
+                            <tr>
+                                <th class="p-3.5 rounded-l-xl">Nama Calon</th>
+                                <th class="p-3.5">NISN / Kelas</th>
+                                <th class="p-3.5">No. WhatsApp</th>
+                                <th class="p-3.5">Tgl Daftar</th>
+                                <th class="p-3.5">Status Seleksi</th>
+                                <th class="p-3.5 rounded-r-xl text-center">Wawancara</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabel-duta-body" class="divide-y divide-slate-800/60 font-medium">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 4: STATUS PINJAMAN SISWA ================= -->
+        <section id="tab-pinjaman-siswa" class="tab-content space-y-6 hidden">
+            <div class="glass-card rounded-3xl p-6 border-l-4 border-l-cyan-400 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-clock-rotate-left text-cyan-400"></i> Progres & Jatuh Tempo Peminjaman Buku
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-1">
+                        Pantau tanggal pengembalian. Pengingat otomatis aktif menjelang H-2 jatuh tempo.
+                    </p>
+                </div>
+                <button onclick="checkStudentLoanAction()" class="px-4 py-2.5 text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl shadow transition flex items-center gap-2">
+                    <i class="fa-solid fa-plus-circle"></i> Ajukan Pinjaman Buku
+                </button>
+            </div>
+
+            <!-- List Pinjaman Container -->
+            <div id="container-pinjaman-siswa" class="space-y-4">
+                <!-- Populated via JS -->
+            </div>
+        </section>
+
+        <!-- ================= TAB 5: PANEL ADMIN PROTEKSI ================= -->
+        <section id="tab-admin-panel" class="tab-content space-y-6 hidden">
+            <div class="glass-card rounded-3xl p-6 border-2 border-amber-500/50 bg-slate-950/80 space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg border border-amber-500/30">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-extrabold text-white">PANEL KONTROL ADMIN PERPUSTAKAAN</h2>
+                            <p class="text-xs text-amber-300/80">Mode Admin Terproteksi Active (Password Verified)</p>
+                        </div>
+                    </div>
+                    <button onclick="closeAdminPanel()" class="px-3 py-1.5 text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl">
+                        <i class="fa-solid fa-lock mr-1"></i> Kunci Admin
+                    </button>
+                </div>
+
+                <!-- Admin Action Tabs -->
+                <div class="flex items-center gap-2 overflow-x-auto pb-1">
+                    <button onclick="switchAdminTab('kelola-anggota')" id="atab-kelola-anggota" class="admin-tab-btn px-4 py-2 text-xs font-bold rounded-xl bg-amber-500 text-slate-950 shadow">
+                        <i class="fa-solid fa-users-gear mr-1"></i> Kelola Anggota
+                    </button>
+                    <button onclick="switchAdminTab('kelola-buku')" id="atab-kelola-buku" class="admin-tab-btn px-4 py-2 text-xs font-bold rounded-xl bg-slate-800 text-slate-300 hover:text-white">
+                        <i class="fa-solid fa-book-medical mr-1"></i> Kelola Buku
+                    </button>
+                    <button onclick="switchAdminTab('persetujuan-pinjam')" id="atab-persetujuan-pinjam" class="admin-tab-btn px-4 py-2 text-xs font-bold rounded-xl bg-slate-800 text-slate-300 hover:text-white">
+                        <i class="fa-solid fa-file-signature mr-1"></i> Persetujuan Pinjaman & WA
+                    </button>
+                    <button onclick="switchAdminTab('release-duta')" id="atab-release-duta" class="admin-tab-btn px-4 py-2 text-xs font-bold rounded-xl bg-slate-800 text-slate-300 hover:text-white">
+                        <i class="fa-solid fa-bullhorn mr-1"></i> Release Duta Literasi
+                    </button>
+                </div>
+
+                <!-- Sub-Section 1: Kelola Anggota -->
+                <div id="sec-admin-anggota" class="admin-sec space-y-4 pt-2">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-sm font-bold text-white">Daftar Anggota & Akses Login Siswa</h3>
+                        <button onclick="openModal('modal-tambah-anggota')" class="px-3.5 py-2 text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl shadow flex items-center gap-1.5">
+                            <i class="fa-solid fa-user-plus"></i> + Tambah Anggota
+                        </button>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs text-slate-300">
+                            <thead class="bg-slate-900 text-slate-400 uppercase font-extrabold border-b border-slate-800">
+                                <tr>
+                                    <th class="p-3">ID / NISN</th>
+                                    <th class="p-3">Nama</th>
+                                    <th class="p-3">Kelas</th>
+                                    <th class="p-3">Password Siswa</th>
+                                    <th class="p-3">Jenis Status</th>
+                                    <th class="p-3 text-center">Aksi Admin</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabel-admin-anggota-body" class="divide-y divide-slate-800 font-medium">
+                                <!-- Populated via JS -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
+                <!-- Sub-Section 2: Kelola Buku -->
+                <div id="sec-admin-buku" class="admin-sec space-y-4 pt-2 hidden">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-sm font-bold text-white">Kelola Data Katalog Buku</h3>
+                        <button onclick="openModal('modal-tambah-buku')" class="px-3.5 py-2 text-xs font-bold bg-purple-600 hover:bg-purple-500 text-white rounded-xl shadow flex items-center gap-1.5">
+                            <i class="fa-solid fa-plus"></i> + Tambah Buku
+                        </button>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs text-slate-300">
+                            <thead class="bg-slate-900 text-slate-400 uppercase font-extrabold border-b border-slate-800">
+                                <tr>
+                                    <th class="p-3">Buku & Cover</th>
+                                    <th class="p-3">Pengarang</th>
+                                    <th class="p-3">Kategori</th>
+                                    <th class="p-3">Stok</th>
+                                    <th class="p-3 text-center">Aksi Admin</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabel-admin-buku-body" class="divide-y divide-slate-800 font-medium">
+                                <!-- Populated via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Sub-Section 3: Persetujuan Pinjam & WA -->
+                <div id="sec-admin-pinjam" class="admin-sec space-y-4 pt-2 hidden">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-white">Persetujuan Pinjaman & Kirim Notifikasi WA</h3>
+                            <p class="text-[11px] text-slate-400">Setujui/Tolak pengajuan dan kirim pengingat WA otomatis untuk H-2 / Terlambat</p>
+                        </div>
+                        <button onclick="kirimSemuaWAJatuhTempo()" class="px-4 py-2 text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl shadow flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Kirim WA Jatuh Tempo (Massal)
+                        </button>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs text-slate-300">
+                            <thead class="bg-slate-900 text-slate-400 uppercase font-extrabold border-b border-slate-800">
+                                <tr>
+                                    <th class="p-3">Peminjam</th>
+                                    <th class="p-3">Buku</th>
+                                    <th class="p-3">Tgl Pinjam / Tempo</th>
+                                    <th class="p-3">Status Permintaan</th>
+                                    <th class="p-3 text-center">Aksi Persetujuan & WA</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabel-admin-pinjam-body" class="divide-y divide-slate-800 font-medium">
+                                <!-- Populated via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Sub-Section 4: Release Duta Literasi -->
+                <div id="sec-admin-duta" class="admin-sec space-y-4 pt-2 hidden">
+                    <div class="p-4 rounded-2xl bg-amber-950/30 border border-amber-500/30 space-y-2">
+                        <h4 class="text-xs font-bold text-amber-300"><i class="fa-solid fa-bullhorn mr-1"></i> Rilis Duta Literasi Bulan Berjalan</h4>
+                        <p class="text-[11px] text-slate-300">Pilih pendaftar Duta Literasi di bawah ini untuk dipublikasikan ke Dashboard Utama publik secara resmi.</p>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs text-slate-300">
+                            <thead class="bg-slate-900 text-slate-400 uppercase font-extrabold border-b border-slate-800">
+                                <tr>
+                                    <th class="p-3">Nama Pendaftar</th>
+                                    <th class="p-3">NISN / Kelas</th>
+                                    <th class="p-3">Kontak WA</th>
+                                    <th class="p-3">Status Rilis Publik</th>
+                                    <th class="p-3 text-center">Aksi Release</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabel-admin-duta-body" class="divide-y divide-slate-800 font-medium">
+                                <!-- Populated via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODALS CONTAINER -->
+
+    <!-- MODAL 1: Login Admin (glendy2108) -->
+    <div id="modal-login-admin" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
+        <div class="glass-card max-w-sm w-full rounded-3xl p-6 border border-amber-500/40 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-amber-400"></i> Verifikasi Admin Active
+                </h3>
+                <button onclick="closeModal('modal-login-admin')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form onsubmit="verifyAdminPassword(event)" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Password Akses Admin</label>
+                    <input type="password" id="input-admin-pass" required placeholder="Masukkan password admin..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-amber-400 focus:outline-none">
+                </div>
                 <div class="pt-2 flex justify-end gap-2">
-                    <button type="button" onclick="closeModal('modal-login-admin')" class="px-4 py-2 text-xs font-semibold text-slate-400 hover:text-white">Batal</button>
-                    <button type="submit" class="px-5 py-2.5 text-xs font-bold bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white rounded-xl shadow-lg transition flex items-center gap-2">
-                        <i class="fa-solid fa-key"></i> Masuk Mode Admin
-                    </button>
+                    <button type="button" onclick="closeModal('modal-login-admin')" class="px-3 py-2 text-xs font-semibold text-slate-400">Batal</button>
+                    <button type="submit" class="px-4 py-2 text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl shadow">Akses Panel Admin</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- MODAL 1: Tambah Buku Baru (Admin) -->
-    <div id="modal-tambah-buku" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
-        <div class="glass-card max-w-lg w-full rounded-3xl p-6 border border-purple-500/30 space-y-4">
+    <!-- MODAL 2: Login Siswa Terbatas -->
+    <div id="modal-login-siswa" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
+        <div class="glass-card max-w-sm w-full rounded-3xl p-6 border border-cyan-500/40 space-y-4">
             <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                    <i class="fa-solid fa-book-medical text-purple-400"></i> Upload Buku Baru (Canva Sheet)
+                <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-user-graduate text-cyan-400"></i> Login Siswa Terdaftar
                 </h3>
-                <button onclick="closeModal('modal-tambah-buku')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+                <button onclick="closeModal('modal-login-siswa')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            <form id="form-tambah-buku" onsubmit="simpanBukuBaru(event)" class="space-y-3">
+            <form onsubmit="processSiswaLogin(event)" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">ID / NISN Siswa</label>
+                    <input type="text" id="login-nisn" required placeholder="Masukkan ID / NISN..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-cyan-400 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Password Siswa</label>
+                    <input type="password" id="login-password" required placeholder="Masukkan password..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-cyan-400 focus:outline-none">
+                </div>
+                <p id="login-error-msg" class="text-[11px] text-rose-400 font-semibold hidden"></p>
+                <div class="pt-2 flex justify-end gap-2">
+                    <button type="button" onclick="closeModal('modal-login-siswa')" class="px-3 py-2 text-xs font-semibold text-slate-400">Batal</button>
+                    <button type="submit" class="px-4 py-2 text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl shadow">Login Siswa</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 3: Tambah / Edit Anggota (Admin) -->
+    <div id="modal-tambah-anggota" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
+        <div class="glass-card max-w-md w-full rounded-3xl p-6 border border-emerald-500/40 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h3 class="text-sm font-bold text-white flex items-center gap-2" id="title-modal-anggota">
+                    <i class="fa-solid fa-user-plus text-emerald-400"></i> Tambah Anggota Perpustakaan
+                </h3>
+                <button onclick="closeModal('modal-tambah-anggota')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form onsubmit="simpanAnggotaAdmin(event)" class="space-y-3">
+                <input type="hidden" id="edit-anggota-nisn-old">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">ID / NISN Siswa</label>
+                    <input type="text" id="anggota-nisn" required placeholder="Contoh: 0067829101" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-emerald-400 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Nama Lengkap Siswa</label>
+                    <input type="text" id="anggota-nama" required placeholder="Contoh: Brayen Lumintang" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-emerald-400 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Kelas</label>
+                        <input type="text" id="anggota-kelas" required placeholder="XI MIPA 1" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-emerald-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Password Siswa</label>
+                        <input type="text" id="anggota-pass" required placeholder="12345" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-emerald-400 focus:outline-none">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">No. WhatsApp</label>
+                        <input type="text" id="anggota-wa" required placeholder="08123456789" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-emerald-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Jenis Status</label>
+                        <select id="anggota-status" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-emerald-400 focus:outline-none">
+                            <option value="Aktif">Aktif</option>
+                            <option value="Tidak Aktif">Tidak Aktif</option>
+                            <option value="Alumni">Alumni</option>
+                            <option value="Sudah Tidak Ada">Sudah Tidak Ada</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pt-2 flex justify-end gap-2">
+                    <button type="button" onclick="closeModal('modal-tambah-anggota')" class="px-3 py-2 text-xs font-semibold text-slate-400">Batal</button>
+                    <button type="submit" class="px-4 py-2 text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl shadow">Simpan Data Anggota</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 4: Tambah / Edit Buku (Admin) -->
+    <div id="modal-tambah-buku" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
+        <div class="glass-card max-w-lg w-full rounded-3xl p-6 border border-purple-500/40 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h3 class="text-sm font-bold text-white flex items-center gap-2" id="title-modal-buku">
+                    <i class="fa-solid fa-book-medical text-purple-400"></i> Kelola Data Buku
+                </h3>
+                <button onclick="closeModal('modal-tambah-buku')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form onsubmit="simpanBukuAdmin(event)" class="space-y-3">
+                <input type="hidden" id="edit-buku-id">
                 <div>
                     <label class="block text-xs font-semibold text-slate-300 mb-1">Judul Buku</label>
-                    <input type="text" required id="buku-judul" placeholder="Contoh: Laskar Pelangi II" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-purple-500 focus:outline-none">
+                    <input type="text" id="buku-judul" required placeholder="Judul buku..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-purple-400 focus:outline-none">
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-1">Pengarang</label>
-                        <input type="text" required id="buku-pengarang" placeholder="Nama pengarang" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-purple-500 focus:outline-none">
+                        <input type="text" id="buku-pengarang" required placeholder="Nama pengarang" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-purple-400 focus:outline-none">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Kategori</label>
-                        <select id="buku-kategori" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-purple-500 focus:outline-none">
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Kategori Buku</label>
+                        <select id="buku-kategori" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-purple-400 focus:outline-none">
                             <option value="Fiksi">Fiksi</option>
-                            <option value="Sains">Sains</option>
-                            <option value="Sejarah">Sejarah</option>
-                            <option value="Pengembangan">Self Improvement</option>
+                            <option value="Non-Fiksi">Non-Fiksi</option>
+                            <option value="Referensi">Referensi</option>
                             <option value="Pelajaran">Pelajaran</option>
                         </select>
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Stok Awal</label>
-                        <input type="number" min="1" value="5" id="buku-stok" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-purple-500 focus:outline-none">
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Jumlah Stok</label>
+                        <input type="number" min="1" value="5" id="buku-stok" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-purple-400 focus:outline-none">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">URL Cover Buku (Optional)</label>
-                        <input type="text" id="buku-cover" placeholder="https://..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-purple-500 focus:outline-none">
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">URL Cover Buku (Opsional)</label>
+                        <input type="text" id="buku-cover" placeholder="https://..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-purple-400 focus:outline-none">
                     </div>
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Ringkasan / Sinopsis Singkat</label>
-                    <textarea id="buku-sinopsis" rows="2" placeholder="Sinopsis singkat buku..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-white focus:border-purple-500 focus:outline-none"></textarea>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Sinopsis Singkat</label>
+                    <textarea id="buku-sinopsis" rows="2" placeholder="Ringkasan singkat..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white focus:border-purple-400 focus:outline-none"></textarea>
                 </div>
                 <div class="pt-2 flex justify-end gap-2">
-                    <button type="button" onclick="closeModal('modal-tambah-buku')" class="px-4 py-2 text-xs font-semibold text-slate-400 hover:text-white">Batal</button>
-                    <button type="submit" class="px-5 py-2 text-xs font-bold bg-purple-600 hover:bg-purple-500 text-white rounded-xl shadow-lg">Simpan & Publikasikan</button>
+                    <button type="button" onclick="closeModal('modal-tambah-buku')" class="px-3 py-2 text-xs font-semibold text-slate-400">Batal</button>
+                    <button type="submit" class="px-4 py-2 text-xs font-bold bg-purple-600 hover:bg-purple-500 text-white rounded-xl shadow">Simpan Data Buku</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- MODAL 2: Catat Peminjaman Baru (Admin) -->
-    <div id="modal-tambah-pinjaman" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
-        <div class="glass-card max-w-lg w-full rounded-3xl p-6 border border-cyan-500/30 space-y-4">
+    <!-- MODAL 5: Form Pendaftaran Duta Literasi (3 Pertanyaan Wawancara) -->
+    <div id="modal-daftar-duta" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden overflow-y-auto">
+        <div class="glass-card max-w-lg w-full my-8 rounded-3xl p-6 border border-amber-500/40 space-y-4">
             <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                    <i class="fa-solid fa-hand-holding-hand text-cyan-400"></i> Catat Transaksi Peminjaman
+                <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-crown text-amber-400"></i> Form Pendaftaran Calon Duta Literasi
                 </h3>
-                <button onclick="closeModal('modal-tambah-pinjaman')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+                <button onclick="closeModal('modal-daftar-duta')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            <form id="form-tambah-pinjaman" onsubmit="simpanPinjamanBaru(event)" class="space-y-3">
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Pilih Anggota / Siswa</label>
-                    <select id="pinjam-anggota-select" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-cyan-500 focus:outline-none">
-                        <!-- Populated via JS -->
-                    </select>
+            
+            <form onsubmit="simpanPendaftaranDuta(event)" class="space-y-3">
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Nama Siswa</label>
+                        <input type="text" id="duta-nama" required readonly class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-300">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">NISN / Kelas</label>
+                        <input type="text" id="duta-nisn-kelas" required readonly class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-300">
+                    </div>
                 </div>
+
+                <div class="p-3 rounded-xl bg-amber-950/30 border border-amber-500/20 text-[11px] text-amber-200">
+                    <i class="fa-solid fa-clipboard-question mr-1"></i> Jawab 3 pertanyaan wawancara di bawah secara inspiratif!
+                </div>
+
+                <div class="space-y-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-200 mb-1">1. Apa motivasi utama Anda mendaftar Duta Literasi SMAN 4 Manado?</label>
+                        <textarea id="duta-q1" required rows="2" placeholder="Motivasi Anda..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white focus:border-amber-400 focus:outline-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-200 mb-1">2. Buku apa yang paling berkesan dan bagaimana cara Anda mengajak teman membaca?</label>
+                        <textarea id="duta-q2" required rows="2" placeholder="Judul buku & strategi..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white focus:border-amber-400 focus:outline-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-200 mb-1">3. Apa rencana program inovatif yang ingin Anda buat untuk budaya baca Gen Z?</label>
+                        <textarea id="duta-q3" required rows="2" placeholder="Ide kreatif..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white focus:border-amber-400 focus:outline-none"></textarea>
+                    </div>
+                </div>
+
+                <div class="pt-2 flex justify-end gap-2">
+                    <button type="button" onclick="closeModal('modal-daftar-duta')" class="px-3 py-2 text-xs font-semibold text-slate-400">Batal</button>
+                    <button type="submit" class="px-4 py-2 text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl shadow">Kirim Form Duta</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 6: Ajukan Pinjaman (Siswa) -->
+    <div id="modal-pinjam-buku" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
+        <div class="glass-card max-w-md w-full rounded-3xl p-6 border border-cyan-500/40 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-hand-holding-hand text-cyan-400"></i> Pengajuan Peminjaman Buku
+                </h3>
+                <button onclick="closeModal('modal-pinjam-buku')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form onsubmit="prosesPengajuanPinjam(event)" class="space-y-3">
                 <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Pilih Buku yang Dipinjam</label>
-                    <select id="pinjam-buku-select" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-cyan-500 focus:outline-none">
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Buku yang Dipilih</label>
+                    <select id="pinjam-buku-select" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-cyan-400 focus:outline-none">
                         <!-- Populated via JS -->
                     </select>
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-1">Tanggal Pinjam</label>
-                        <input type="date" id="pinjam-tgl-pinjam" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-cyan-500 focus:outline-none">
+                        <input type="date" id="pinjam-tgl-pinjam" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-cyan-400 focus:outline-none">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Tanggal Jatuh Tempo</label>
-                        <input type="date" id="pinjam-tgl-tempo" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-cyan-500 focus:outline-none">
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Jatuh Tempo (7 Hari)</label>
+                        <input type="date" id="pinjam-tgl-tempo" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:border-cyan-400 focus:outline-none">
                     </div>
                 </div>
                 <div class="pt-2 flex justify-end gap-2">
-                    <button type="button" onclick="closeModal('modal-tambah-pinjaman')" class="px-4 py-2 text-xs font-semibold text-slate-400 hover:text-white">Batal</button>
-                    <button type="submit" class="px-5 py-2 text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl shadow-lg">Proses Peminjaman</button>
+                    <button type="button" onclick="closeModal('modal-pinjam-buku')" class="px-3 py-2 text-xs font-semibold text-slate-400">Batal</button>
+                    <button type="submit" class="px-4 py-2 text-xs font-bold bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl shadow">Kirim Pengajuan</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- MODAL 3: Form Pendaftaran Duta Literasi (Siswa) -->
-    <div id="modal-daftar-duta" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden overflow-y-auto">
-        <div class="glass-card max-w-xl w-full my-8 rounded-3xl p-6 border border-amber-500/30 space-y-4">
-            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                    <i class="fa-solid fa-crown text-amber-400"></i> Form Pendaftaran Calon Duta Literasi
-                </h3>
-                <button onclick="closeModal('modal-daftar-duta')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
-            </div>
-            
-            <form id="form-daftar-duta" onsubmit="simpanPendaftaranDuta(event)" class="space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Nama Lengkap Siswa</label>
-                        <input type="text" id="duta-nama" required placeholder="Contoh: Brayen Polii" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-amber-500 focus:outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">NISN</label>
-                        <input type="text" id="duta-nisn" required placeholder="00xxxxxxxx" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-amber-500 focus:outline-none">
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Kelas (SMA N 4 Manado)</label>
-                        <input type="text" id="duta-kelas" required placeholder="Contoh: XI MIPA 2" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-amber-500 focus:outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">No. WhatsApp Aktif</label>
-                        <input type="text" id="duta-wa" required placeholder="08xxxxxxxxxx" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-amber-500 focus:outline-none">
-                    </div>
-                </div>
-
-                <div class="p-3 rounded-xl bg-amber-950/20 border border-amber-500/20 space-y-1">
-                    <p class="text-xs font-bold text-amber-300"><i class="fa-solid fa-clipboard-question mr-1"></i> Sesi Pertanyaan Wawancara Umum</p>
-                    <p class="text-[11px] text-slate-400">Mohon dijawab secara jujur dan inspiratif!</p>
-                </div>
-
-                <!-- 3 Pertanyaan Wawancara -->
-                <div class="space-y-3">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-200 mb-1">1. Apa motivasi utama Anda mendaftar sebagai Duta Literasi SMAN 4 Manado?</label>
-                        <textarea id="duta-q1" required rows="2" placeholder="Tuliskan motivasi utamamu..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-white focus:border-amber-500 focus:outline-none"></textarea>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-200 mb-1">2. Apa buku yang paling berkesan bagi Anda dan bagaimana cara Anda mengajak teman membacanya?</label>
-                        <textarea id="duta-q2" required rows="2" placeholder="Judul buku & strategi mengajak teman..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-white focus:border-amber-500 focus:outline-none"></textarea>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-200 mb-1">3. Apa rencana program inovatif yang ingin Anda buat untuk meningkatkan minat baca siswa SMAN 4 Manado?</label>
-                        <textarea id="duta-q3" required rows="2" placeholder="Ide program kreatif (misal: Pojok Baca Gen Z, Podcast Buku)..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-white focus:border-amber-500 focus:outline-none"></textarea>
-                    </div>
-                </div>
-
-                <div class="pt-2 flex justify-end gap-2">
-                    <button type="button" onclick="closeModal('modal-daftar-duta')" class="px-4 py-2 text-xs font-semibold text-slate-400 hover:text-white">Batal</button>
-                    <button type="submit" class="px-5 py-2 text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl shadow-lg">Kirim Pendaftaran Duta</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- MODAL 4: Tambah Anggota Baru (Admin) -->
-    <div id="modal-tambah-anggota" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
-        <div class="glass-card max-w-md w-full rounded-3xl p-6 border border-emerald-500/30 space-y-4">
-            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                    <i class="fa-solid fa-user-plus text-emerald-400"></i> Tambah Anggota Perpustakaan
-                </h3>
-                <button onclick="closeModal('modal-tambah-anggota')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
-            </div>
-            <form id="form-tambah-anggota" onsubmit="simpanAnggotaBaru(event)" class="space-y-3">
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Nama Lengkap Siswa</label>
-                    <input type="text" id="anggota-nama" required placeholder="Contoh: Jessica Tani" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-emerald-500 focus:outline-none">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">NISN</label>
-                    <input type="text" id="anggota-nisn" required placeholder="00xxxxxxxx" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-emerald-500 focus:outline-none">
-                </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Kelas</label>
-                        <input type="text" id="anggota-kelas" required placeholder="XII IPA 1" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-emerald-500 focus:outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">No. WhatsApp</label>
-                        <input type="text" id="anggota-wa" required placeholder="08123456789" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:border-emerald-500 focus:outline-none">
-                    </div>
-                </div>
-                <div class="pt-2 flex justify-end gap-2">
-                    <button type="button" onclick="closeModal('modal-tambah-anggota')" class="px-4 py-2 text-xs font-semibold text-slate-400 hover:text-white">Batal</button>
-                    <button type="submit" class="px-5 py-2 text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl shadow-lg">Simpan Anggota</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- MODAL 5: Detail Wawancara Duta (Admin Viewer) -->
+    <!-- MODAL 7: Detail Jawaban Duta (Viewer) -->
     <div id="modal-detail-duta" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
-        <div class="glass-card max-w-lg w-full rounded-3xl p-6 border border-purple-500/30 space-y-4">
+        <div class="glass-card max-w-lg w-full rounded-3xl p-6 border border-purple-500/40 space-y-4">
             <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                    <i class="fa-solid fa-file-lines text-amber-400"></i> Detail Jawaban Wawancara
+                <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-file-lines text-amber-400"></i> Jawaban Wawancara Duta Literasi
                 </h3>
-                <button onclick="closeModal('modal-detail-duta')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+                <button onclick="closeModal('modal-detail-duta')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            <div id="detail-duta-content" class="space-y-3 text-sm text-slate-300 max-h-96 overflow-y-auto pr-2">
+            <div id="detail-duta-content" class="space-y-3 text-xs text-slate-300 max-h-96 overflow-y-auto pr-1">
                 <!-- Content injected via JS -->
             </div>
             <div class="pt-2 flex justify-end">
@@ -740,26 +823,36 @@
         </div>
     </div>
 
-    <!-- NOTIFICATION TOAST -->
+    <!-- TOAST NOTIFICATION -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
         <div class="glass-card px-4 py-3 rounded-2xl border border-cyan-500/40 shadow-2xl flex items-center gap-3">
-            <div id="toast-icon" class="w-8 h-8 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
-                <i class="fa-solid fa-check"></i>
+            <div class="w-7 h-7 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xs">
+                <i class="fa-solid fa-bell"></i>
             </div>
-            <p id="toast-msg" class="text-xs font-semibold text-white">Notifikasi sistem</p>
+            <p id="toast-msg" class="text-xs font-bold text-white">Notifikasi sistem</p>
         </div>
     </div>
 
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Default Mock Data generator for SMAN 4 Manado
+        // APP DEFAULT MOCK DATA PERSISTENCE
+        const ADMIN_PASSWORD_CORRECT = "glendy2108";
+
+        const DEFAULT_ANGGOTA = [
+            { nisn: "0067829101", nama: "Gabriel Lumintang", kelas: "XI MIPA 1", pass: "12345", status: "Aktif", wa: "081244556677", visits: 18 },
+            { nisn: "0067829102", nama: "Stefani Sondakh", kelas: "XI IPS 2", pass: "12345", status: "Aktif", wa: "082199887766", visits: 14 },
+            { nisn: "0067829103", nama: "Christian Waworuntu", kelas: "XII MIPA 3", pass: "12345", status: "Alumni", wa: "085344112233", visits: 25 },
+            { nisn: "0067829104", nama: "Kezia Supit", kelas: "X-2", pass: "12345", status: "Aktif", wa: "089611223344", visits: 9 },
+            { nisn: "0067829105", nama: "Daniel Pangemanan", kelas: "XII IPS 1", pass: "12345", status: "Sudah Tidak Ada", wa: "081300001111", visits: 2 }
+        ];
+
         const DEFAULT_BUKU = [
             {
                 id: "B-101",
                 judul: "Atomic Habits: Perubahan Kecil untuk Hasil Luar Biasa",
                 pengarang: "James Clear",
-                kategori: "Pengembangan",
+                kategori: "Non-Fiksi",
                 stok: 6,
-                tglRilis: "2026-03-01",
                 cover: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=400&q=80",
                 sinopsis: "Panduan praktis mengubah kebiasaan kecil menjadi keberhasilan besar bagi generasi muda."
             },
@@ -769,335 +862,288 @@
                 pengarang: "Pramoedya Ananta Toer",
                 kategori: "Fiksi",
                 stok: 4,
-                tglRilis: "2026-03-05",
                 cover: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80",
                 sinopsis: "Kisah Minke menantang sekat-sekat keadilan sosial di era pergerakan."
             },
             {
                 id: "B-103",
-                judul: "Fisika Modern & Kosmologi Gen Z",
+                judul: "Fisika Modern & Kosmologi SMA",
                 pengarang: "Prof. Dr. R. Manoppo",
-                kategori: "Sains",
+                kategori: "Pelajaran",
                 stok: 8,
-                tglRilis: "2026-03-10",
                 cover: "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80",
                 sinopsis: "Memahami rahasia alam semesta, kuantum, dan lubang hitam dengan cara yang asyik."
             },
             {
                 id: "B-104",
-                judul: "Filosofi Teras: Stoisisme untuk Mental Remaja",
-                pengarang: "Henry Manampiring",
-                kategori: "Pengembangan",
-                stok: 5,
-                tglRilis: "2026-03-12",
+                judul: "Ensiklopedi Sejarah Sulawesi Utara",
+                pengarang: "Tim Literasi Manado",
+                kategori: "Referensi",
+                stok: 3,
                 cover: "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?auto=format&fit=crop&w=400&q=80",
-                sinopsis: "Penerapan filsafat stoisisme kuno untuk mengatasi emosi negatif dan skenario fobia Gen Z."
+                sinopsis: "Referensi sejarah komprehensif kebudayaan Minahasa dan Kota Manado."
             }
         ];
 
-        const DEFAULT_ANGGOTA = [
-            { id: "A-01", nama: "Gabriel Lumintang", nisn: "0067829101", kelas: "XI MIPA 1", wa: "081244556677" },
-            { id: "A-02", nama: "Stefani Sondakh", nisn: "0067829102", kelas: "XI IPS 2", wa: "082199887766" },
-            { id: "A-03", nama: "Christian Waworuntu", nisn: "0067829103", kelas: "XII MIPA 3", wa: "085344112233" },
-            { id: "A-04", nama: "Kezia Supit", nisn: "0067829104", kelas: "X-2", wa: "089611223344" }
-        ];
-
-        // Set default dates dynamically based on current date
         const today = new Date();
         const formatDateStr = (d) => d.toISOString().split('T')[0];
 
-        // Create mock borrowings with varying due dates
         const dateOverdue = new Date(today);
-        dateOverdue.setDate(today.getDate() - 1); // 1 day ago (Overdue)
+        dateOverdue.setDate(today.getDate() - 1);
 
         const dateCritical = new Date(today);
-        dateCritical.setDate(today.getDate() + 1); // Tomorrow (H-1)
+        dateCritical.setDate(today.getDate() + 1);
 
         const dateSafe = new Date(today);
-        dateSafe.setDate(today.getDate() + 6); // In 6 days (Aman)
+        dateSafe.setDate(today.getDate() + 5);
 
-        const DEFAULT_PEMINJAMAN = [
+        const DEFAULT_PINJAMAN = [
             {
                 id: "P-1001",
-                anggotaId: "A-01",
-                namaAnggota: "Gabriel Lumintang",
                 nisn: "0067829101",
+                nama: "Gabriel Lumintang",
                 wa: "081244556677",
                 bukuId: "B-101",
                 judulBuku: "Atomic Habits: Perubahan Kecil untuk Hasil Luar Biasa",
-                tglPinjam: formatDateStr(new Date(today.getTime() - 8 * 86400000)),
-                tglTempo: formatDateStr(dateCritical)
+                tglPinjam: formatDateStr(new Date(today.getTime() - 6 * 86400000)),
+                tglTempo: formatDateStr(dateCritical),
+                status: "Disetujui"
             },
             {
                 id: "P-1002",
-                anggotaId: "A-02",
-                namaAnggota: "Stefani Sondakh",
                 nisn: "0067829102",
+                nama: "Stefani Sondakh",
                 wa: "082199887766",
                 bukuId: "B-102",
                 judulBuku: "Bumi Manusia & Sejarah Perjuangan",
-                tglPinjam: formatDateStr(new Date(today.getTime() - 9 * 86400000)),
-                tglTempo: formatDateStr(dateOverdue)
-            },
-            {
-                id: "P-1003",
-                anggotaId: "A-03",
-                namaAnggota: "Christian Waworuntu",
-                nisn: "0067829103",
-                wa: "085344112233",
-                bukuId: "B-104",
-                judulBuku: "Filosofi Teras: Stoisisme untuk Mental Remaja",
-                tglPinjam: formatDateStr(new Date(today.getTime() - 2 * 86400000)),
-                tglTempo: formatDateStr(dateSafe)
+                tglPinjam: formatDateStr(new Date(today.getTime() - 8 * 86400000)),
+                tglTempo: formatDateStr(dateOverdue),
+                status: "Disetujui"
             }
         ];
 
         const DEFAULT_DUTA = [
             {
                 id: "D-01",
-                nama: "Maudy Pangemanan",
-                nisn: "0078901234",
-                kelas: "XI MIPA 2",
-                wa: "081399881122",
+                nisn: "0067829101",
+                nama: "Gabriel Lumintang",
+                kelas: "XI MIPA 1",
+                wa: "081244556677",
                 tglDaftar: formatDateStr(today),
-                status: "Menunggu Wawancara",
                 q1: "Saya ingin menjadikan perpustakaan SMAN 4 Manado tempat paling estetik dan menyenangkan untuk nongkrong produktif Gen Z.",
-                q2: "Buku 'Filosofi Teras'. Saya sering sharing quotes menariknya di Story Instagram untuk memancing minat baca kawan-kawan.",
-                q3: "Membuat program 'Literacy Book Podcast & Coffee Corner' di pojok perpustakaan setiap hari Jumat."
+                q2: "Buku 'Atomic Habits'. Saya sering sharing quotes menariknya di Instagram untuk memancing minat baca kawan-kawan.",
+                q3: "Membuat program 'Literacy Book Podcast & Coffee Corner' di pojok perpustakaan setiap hari Jumat.",
+                isReleased: true
             }
         ];
 
-        // Application State
-        let currentRole = 'siswa'; // 'siswa' or 'admin'
-        let isAdminAuthenticated = false;
-        let currentTab = 'katalog';
-        let bukuData = [];
+        // State Variables
+        let isAdminActive = false;
+        let loggedSiswa = null; // object member if logged in
         let anggotaData = [];
-        let peminjamanData = [];
+        let bukuData = [];
+        let pinjamanData = [];
         let dutaData = [];
 
-        // ADMIN AUTHENTICATION
-        const ADMIN_PASSWORD_VALID = "glendy2108";
+        function initData() {
+            anggotaData = JSON.parse(localStorage.getItem('sman4_v2_anggota')) || DEFAULT_ANGGOTA;
+            bukuData = JSON.parse(localStorage.getItem('sman4_v2_buku')) || DEFAULT_BUKU;
+            pinjamanData = JSON.parse(localStorage.getItem('sman4_v2_pinjaman')) || DEFAULT_PINJAMAN;
+            dutaData = JSON.parse(localStorage.getItem('sman4_v2_duta')) || DEFAULT_DUTA;
 
-        function requestRoleSwitch(targetRole) {
-            if (targetRole === 'admin') {
-                if (isAdminAuthenticated) {
-                    setRole('admin');
-                } else {
-                    document.getElementById('admin-password-input').value = '';
-                    document.getElementById('admin-error-msg').classList.add('hidden');
-                    openModal('modal-login-admin');
-                }
+            saveAllStorage();
+            renderAllViews();
+        }
+
+        function saveAllStorage() {
+            localStorage.setItem('sman4_v2_anggota', JSON.stringify(anggotaData));
+            localStorage.setItem('sman4_v2_buku', JSON.stringify(bukuData));
+            localStorage.setItem('sman4_v2_pinjaman', JSON.stringify(pinjamanData));
+            localStorage.setItem('sman4_v2_duta', JSON.stringify(dutaData));
+        }
+
+        // AUTHENTICATION LOGIC
+        function openAdminModal() {
+            if (isAdminActive) {
+                switchTab('admin-panel');
             } else {
-                setRole('siswa');
+                openModal('modal-login-admin');
             }
         }
 
         function verifyAdminPassword(e) {
             e.preventDefault();
-            const passwordInput = document.getElementById('admin-password-input').value;
-            const errorMsg = document.getElementById('admin-error-msg');
-            const card = document.getElementById('admin-login-card');
-
-            if (passwordInput === ADMIN_PASSWORD_VALID) {
-                isAdminAuthenticated = true;
+            const inputPass = document.getElementById('input-admin-pass').value;
+            if (inputPass === ADMIN_PASSWORD_CORRECT) {
+                isAdminActive = true;
                 closeModal('modal-login-admin');
-                setRole('admin');
-                showToast('🔑 Login Admin Berhasil! Selamat bekerja Admin.');
+                document.getElementById('input-admin-pass').value = '';
+                showToast("Akses Admin Active Berhasil!");
+                switchTab('admin-panel');
             } else {
-                errorMsg.classList.remove('hidden');
-                card.classList.add('shake-animation');
-                setTimeout(() => card.classList.remove('shake-animation'), 400);
+                showToast("Password Admin Salah!");
             }
         }
 
-        function togglePasswordVisibility() {
-            const pwdInput = document.getElementById('admin-password-input');
-            const eyeIcon = document.getElementById('eye-icon');
-            if (pwdInput.type === 'password') {
-                pwdInput.type = 'text';
-                eyeIcon.className = 'fa-solid fa-eye-slash text-xs';
+        function closeAdminPanel() {
+            isAdminActive = false;
+            switchTab('katalog');
+            showToast("Mode Admin dikunci.");
+        }
+
+        function processSiswaLogin(e) {
+            e.preventDefault();
+            const nisn = document.getElementById('login-nisn').value.trim();
+            const pass = document.getElementById('login-password').value.trim();
+            const errEl = document.getElementById('login-error-msg');
+
+            // Find member match
+            const member = anggotaData.find(a => a.nisn === nisn && a.pass === pass);
+
+            if (member) {
+                if (member.status === 'Tidak Aktif' || member.status === 'Sudah Tidak Ada') {
+                    errEl.innerText = "Akun tidak aktif / tidak dapat digunakan.";
+                    errEl.classList.remove('hidden');
+                    return;
+                }
+
+                loggedSiswa = member;
+                // Increment visits count
+                member.visits = (member.visits || 0) + 1;
+                saveAllStorage();
+
+                closeModal('modal-login-siswa');
+                errEl.classList.add('hidden');
+                document.getElementById('login-nisn').value = '';
+                document.getElementById('login-password').value = '';
+
+                updateSiswaSessionUI();
+                showToast(`Selamat Datang, ${loggedSiswa.nama}!`);
+                renderAllViews();
             } else {
-                pwdInput.type = 'password';
-                eyeIcon.className = 'fa-solid fa-eye text-xs';
+                errEl.innerText = "ID atau Password salah / Akun belum terdaftar oleh Admin Perpustakaan";
+                errEl.classList.remove('hidden');
             }
         }
 
-        function logoutAdmin() {
-            isAdminAuthenticated = false;
-            setRole('siswa');
-            showToast('Telah keluar dari mode Admin');
-        }
-
-        // Initialize Application Data
-        function initApp() {
-            bukuData = JSON.parse(localStorage.getItem('sman4_buku')) || DEFAULT_BUKU;
-            anggotaData = JSON.parse(localStorage.getItem('sman4_anggota')) || DEFAULT_ANGGOTA;
-            peminjamanData = JSON.parse(localStorage.getItem('sman4_peminjaman')) || DEFAULT_PEMINJAMAN;
-            dutaData = JSON.parse(localStorage.getItem('sman4_duta')) || DEFAULT_DUTA;
-
-            saveAllToStorage();
-            
-            // Set default date picker values
-            const todayStr = formatDateStr(new Date());
-            const defaultTempo = new Date();
-            defaultTempo.setDate(defaultTempo.getDate() + 7);
-            
-            if(document.getElementById('pinjam-tgl-pinjam')) {
-                document.getElementById('pinjam-tgl-pinjam').value = todayStr;
-                document.getElementById('pinjam-tgl-tempo').value = formatDateStr(defaultTempo);
-            }
-
+        function logoutSiswa() {
+            loggedSiswa = null;
+            updateSiswaSessionUI();
+            showToast("Anda telah keluar dari akun Siswa.");
             renderAllViews();
         }
 
-        function saveAllToStorage() {
-            localStorage.setItem('sman4_buku', JSON.stringify(bukuData));
-            localStorage.setItem('sman4_anggota', JSON.stringify(anggotaData));
-            localStorage.setItem('sman4_peminjaman', JSON.stringify(peminjamanData));
-            localStorage.setItem('sman4_duta', JSON.stringify(dutaData));
-        }
+        function updateSiswaSessionUI() {
+            const banner = document.getElementById('siswa-welcome-banner');
+            const chip = document.getElementById('logged-user-chip');
+            const btnLogin = document.getElementById('btn-login-siswa');
+            const welcomeText = document.getElementById('welcome-text');
+            const nameChip = document.getElementById('logged-user-name');
 
-        // Switch Role Functionality UI Renderer
-        function setRole(role) {
-            currentRole = role;
-            const btnSiswa = document.getElementById('role-siswa');
-            const btnAdmin = document.getElementById('role-admin');
-            const badge = document.getElementById('current-role-badge');
-            const desc = document.getElementById('role-desc');
-            const adminActions = document.getElementById('admin-quick-actions');
+            if (loggedSiswa) {
+                banner.classList.remove('hidden');
+                chip.classList.remove('hidden');
+                chip.classList.add('flex');
+                btnLogin.classList.add('hidden');
 
-            if (role === 'admin') {
-                btnAdmin.className = "px-3 py-1.5 text-xs font-bold rounded-lg transition-all text-white bg-purple-600 shadow-md";
-                btnSiswa.className = "px-3 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-400 hover:text-white";
-                badge.innerText = "Admin Mode";
-                badge.className = "font-bold text-cyan-400";
-                desc.innerText = "Akses penuh kelola data buku, anggota, peminjaman, & kirim notifikasi WA.";
-                adminActions.classList.remove('hidden');
-
-                // Show all admin elements
-                document.querySelectorAll('.admin-only').forEach(el => el.classList.remove('hidden'));
+                welcomeText.innerText = `Selamat Datang, ${loggedSiswa.nama}! Mau pinjam buku apa hari ini?`;
+                nameChip.innerText = loggedSiswa.nama;
             } else {
-                btnSiswa.className = "px-3 py-1.5 text-xs font-bold rounded-lg transition-all text-white bg-purple-600 shadow-md";
-                btnAdmin.className = "px-3 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-400 hover:text-white";
-                badge.innerText = "Siswa Mode";
-                badge.className = "font-bold text-purple-400";
-                desc.innerText = "Jelajahi buku, cek jadwal peminjaman, & mendaftar Duta Literasi!";
-                adminActions.classList.add('hidden');
-
-                // Hide admin elements
-                document.querySelectorAll('.admin-only').forEach(el => el.classList.add('hidden'));
+                banner.classList.add('hidden');
+                chip.classList.add('hidden');
+                chip.classList.remove('flex');
+                btnLogin.classList.remove('hidden');
             }
-            renderPeminjaman();
         }
 
-        // Switch Active Navigation Tab
+        // NAVIGATION TABS
         function switchTab(tabId) {
-            currentTab = tabId;
+            if (tabId === 'admin-panel' && !isAdminActive) {
+                openModal('modal-login-admin');
+                return;
+            }
+
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
             document.getElementById(`tab-${tabId}`).classList.remove('hidden');
 
-            // Reset navigation button states
             document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.className = "nav-btn px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200 flex items-center gap-2 text-slate-400 hover:text-white hover:bg-slate-800/60";
+                btn.className = "nav-btn px-4 py-2 text-xs font-bold rounded-xl transition-all duration-200 flex items-center gap-2 text-slate-400 hover:text-white hover:bg-slate-800/60";
             });
 
             const activeBtn = document.getElementById(`nav-${tabId}`);
             if (activeBtn) {
-                activeBtn.className = "nav-btn px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200 flex items-center gap-2 text-white bg-gradient-to-r from-purple-600 to-cyan-600 shadow-md";
+                if(tabId === 'admin-panel') {
+                    activeBtn.className = "nav-btn px-4 py-2 text-xs font-bold rounded-xl transition-all duration-200 flex items-center gap-2 text-amber-300 bg-amber-600 font-extrabold shadow";
+                } else {
+                    activeBtn.className = "nav-btn px-4 py-2 text-xs font-bold rounded-xl transition-all duration-200 flex items-center gap-2 text-white bg-gradient-to-r from-purple-600 to-cyan-600 shadow";
+                }
             }
 
             renderAllViews();
         }
 
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+        function switchAdminTab(secId) {
+            document.querySelectorAll('.admin-sec').forEach(e => e.classList.add('hidden'));
+            document.querySelectorAll('.admin-tab-btn').forEach(b => {
+                b.className = "admin-tab-btn px-4 py-2 text-xs font-bold rounded-xl bg-slate-800 text-slate-300 hover:text-white";
+            });
+
+            document.getElementById(`sec-admin-${secId.split('-')[1]}`).classList.remove('hidden');
+            document.getElementById(`atab-${secId}`).className = "admin-tab-btn px-4 py-2 text-xs font-bold rounded-xl bg-amber-500 text-slate-950 shadow";
         }
 
-        // RENDER FUNCTIONS
+        // RENDER VIEWS
         function renderAllViews() {
             renderKatalog();
-            renderPeminjaman();
-            renderDuta();
             renderAnggota();
-            populateSelects();
+            renderLeaderboard();
+            renderDuta();
+            renderPinjamanSiswa();
+            renderAdminTables();
         }
 
-        // 1. Render Katalog & Buku Baru
         function renderKatalog() {
             const search = (document.getElementById('search-buku').value || '').toLowerCase();
-            const filterKat = document.getElementById('filter-kategori').value;
+            const katFilter = document.getElementById('filter-kategori-buku').value;
+
+            const grid = document.getElementById('grid-katalog');
+            const countEl = document.getElementById('katalog-count');
+            grid.innerHTML = '';
 
             const filtered = bukuData.filter(b => {
                 const matchSearch = b.judul.toLowerCase().includes(search) || b.pengarang.toLowerCase().includes(search);
-                const matchKat = (filterKat === 'semua') || b.kategori === filterKat;
+                const matchKat = (katFilter === 'semua') || b.kategori === katFilter;
                 return matchSearch && matchKat;
             });
 
-            // Update Count
-            document.getElementById('katalog-count').innerText = `${filtered.length} Buku Ditampilkan`;
-
-            // Render Table Buku Baru Announcement
-            const tbodyNew = document.getElementById('tabel-buku-baru-body');
-            tbodyNew.innerHTML = '';
-
-            bukuData.slice(0, 5).forEach(buku => {
-                const tr = document.createElement('tr');
-                tr.className = "hover:bg-slate-900/50 transition";
-                tr.innerHTML = `
-                    <td class="p-3.5 flex items-center gap-3">
-                        <img src="${buku.cover}" alt="cover" class="w-10 h-12 rounded-lg object-cover border border-slate-800 shadow" onerror="this.src='https://placehold.co/100x120/1e293b/a855f7?text=Buku'">
-                        <div>
-                            <p class="font-bold text-white text-sm leading-snug">${buku.judul}</p>
-                            <span class="text-[10px] text-purple-400 font-semibold">ID: ${buku.id}</span>
-                        </div>
-                    </td>
-                    <td class="p-3.5 text-slate-300 text-xs">${buku.pengarang}</td>
-                    <td class="p-3.5">
-                        <span class="px-2.5 py-1 text-[11px] font-bold rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20">${buku.kategori}</span>
-                    </td>
-                    <td class="p-3.5 text-xs text-slate-400">${buku.tglRilis || 'Baru Hari Ini'}</td>
-                    <td class="p-3.5 font-bold text-xs text-cyan-400">${buku.stok} Eks</td>
-                    <td class="p-3.5 text-center">
-                        <button onclick="pinjamBukuCepat('${buku.id}')" class="px-3 py-1.5 text-xs font-bold bg-cyan-600/80 hover:bg-cyan-500 text-white rounded-lg border border-cyan-400/30 transition shadow">
-                            <i class="fa-solid fa-bookmark mr-1"></i> Pinjam
-                        </button>
-                    </td>
-                `;
-                tbodyNew.appendChild(tr);
-            });
-
-            // Render Grid Katalog Utama
-            const grid = document.getElementById('grid-katalog');
-            grid.innerHTML = '';
+            countEl.innerText = `${filtered.length} Buku`;
 
             if (filtered.length === 0) {
-                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500">Tidak ada buku yang sesuai dengan pencarian.</div>`;
+                grid.innerHTML = `<div class="col-span-full py-12 text-center text-slate-500 text-xs">Tidak ada buku yang sesuai pencarian.</div>`;
                 return;
             }
 
             filtered.forEach(buku => {
                 const card = document.createElement('div');
-                card.className = "glass-card rounded-2xl overflow-hidden border border-slate-800/80 hover:border-purple-500/50 transition duration-300 flex flex-col justify-between group";
+                card.className = "glass-card rounded-2xl overflow-hidden border border-slate-800 hover:border-purple-500/50 transition duration-300 flex flex-col justify-between group";
                 card.innerHTML = `
                     <div>
-                        <div class="relative h-48 w-full overflow-hidden bg-slate-900">
-                            <img src="${buku.cover}" alt="cover" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/300x400/1e293b/a855f7?text=Buku+SMAN4'">
-                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-extrabold bg-slate-950/80 text-cyan-300 backdrop-blur-md border border-cyan-500/30">
+                        <div class="relative h-44 w-full bg-slate-900 overflow-hidden">
+                            <img src="${buku.cover}" alt="cover" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/300x400/1e293b/a855f7?text=SMAN4+Book'">
+                            <span class="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-slate-950/90 text-cyan-300 border border-cyan-500/30">
                                 Stok: ${buku.stok}
                             </span>
                         </div>
                         <div class="p-4 space-y-2">
                             <span class="text-[10px] uppercase font-extrabold tracking-wider text-purple-400">${buku.kategori}</span>
-                            <h4 class="font-bold text-white text-base leading-snug line-clamp-2">${buku.judul}</h4>
+                            <h4 class="font-bold text-white text-sm leading-snug line-clamp-2">${buku.judul}</h4>
                             <p class="text-xs text-slate-400"><i class="fa-solid fa-feather mr-1 text-slate-500"></i>${buku.pengarang}</p>
-                            <p class="text-xs text-slate-400/90 line-clamp-2 pt-1 font-light">${buku.sinopsis || 'Buku literasi unggulan untuk siswa SMAN 4 Manado.'}</p>
+                            <p class="text-xs text-slate-400/80 line-clamp-2 pt-1 font-light">${buku.sinopsis || 'Buku literasi unggulan SMAN 4 Manado.'}</p>
                         </div>
                     </div>
                     <div class="p-4 pt-0">
-                        <button onclick="pinjamBukuCepat('${buku.id}')" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-purple-600 text-white border border-slate-700 hover:border-purple-400 text-xs font-bold transition flex items-center justify-center gap-2 shadow">
-                            <i class="fa-solid fa-plus text-purple-400 group-hover:text-white"></i> Pinjam Buku Ini
+                        <button onclick="pinjamBukuAction('${buku.id}')" class="w-full py-2.5 rounded-xl ${loggedSiswa ? 'bg-cyan-600 hover:bg-cyan-500' : 'bg-slate-900 hover:bg-slate-800'} text-white text-xs font-bold transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-bookmark"></i> ${loggedSiswa ? 'Pinjam Buku Ini' : 'Login Siswa untuk Pinjam'}
                         </button>
                     </div>
                 `;
@@ -1105,186 +1151,6 @@
             });
         }
 
-        // 2. Render Peminjaman & Progres Jatuh Tempo
-        function renderPeminjaman() {
-            const container = document.getElementById('container-peminjaman');
-            const search = (document.getElementById('search-pinjam').value || '').toLowerCase();
-            const filterStatus = document.getElementById('filter-status-pinjam').value;
-
-            container.innerHTML = '';
-
-            const now = new Date();
-            now.setHours(0,0,0,0);
-
-            const filtered = peminjamanData.filter(p => {
-                const matchSearch = p.namaAnggota.toLowerCase().includes(search) || p.nisn.includes(search) || p.judulBuku.toLowerCase().includes(search);
-                
-                // Calculate Days Left
-                const tglTempo = new Date(p.tglTempo);
-                tglTempo.setHours(0,0,0,0);
-                const diffDays = Math.ceil((tglTempo - now) / (1000 * 60 * 60 * 24));
-
-                let statusCategory = 'aman';
-                if (diffDays < 0) statusCategory = 'terlambat';
-                else if (diffDays <= 2) statusCategory = 'h2';
-
-                if (filterStatus === 'semua') return matchSearch;
-                return matchSearch && (filterStatus === statusCategory);
-            });
-
-            if (filtered.length === 0) {
-                container.innerHTML = `<div class="glass-card rounded-2xl p-8 text-center text-slate-500">Tidak ada peminjaman aktif sesuai kriteria.</div>`;
-                return;
-            }
-
-            filtered.forEach(p => {
-                const tglPinjam = new Date(p.tglPinjam);
-                const tglTempo = new Date(p.tglTempo);
-                tglPinjam.setHours(0,0,0,0);
-                tglTempo.setHours(0,0,0,0);
-
-                // Total duration baseline (e.g., 7 days standard)
-                const totalDuration = Math.max(1, Math.ceil((tglTempo - tglPinjam) / (1000 * 60 * 60 * 24)));
-                const daysRemaining = Math.ceil((tglTempo - now) / (1000 * 60 * 60 * 24));
-                
-                // Percentage calculation for progress bar
-                let percentRemaining = Math.max(0, Math.min(100, Math.round((daysRemaining / totalDuration) * 100)));
-                if (daysRemaining < 0) percentRemaining = 0;
-
-                // Status Badge & Styling Logic
-                let badgeHTML = '';
-                let borderClass = 'border-slate-800';
-                let progressColorClass = 'bg-gradient-to-r from-emerald-500 to-cyan-400';
-                let isCritical = false;
-
-                if (daysRemaining < 0) {
-                    const daysOverdue = Math.abs(daysRemaining);
-                    badgeHTML = `<span class="px-3 py-1 rounded-full text-xs font-extrabold bg-red-500/20 text-red-400 border border-red-500/40 flex items-center gap-1.5 pulse-h2">
-                                    <i class="fa-solid fa-triangle-exclamation"></i> Terlambat ${daysOverdue} Hari
-                                 </span>`;
-                    borderClass = 'border-red-500/50';
-                    progressColorClass = 'bg-red-500';
-                    isCritical = true;
-                } else if (daysRemaining <= 2) {
-                    badgeHTML = `<span class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-1.5 pulse-h2">
-                                    <i class="fa-solid fa-clock"></i> Segera Jatuh Tempo (H-${daysRemaining})
-                                 </span>`;
-                    borderClass = 'border-amber-500/50';
-                    progressColorClass = 'bg-amber-400';
-                    isCritical = true;
-                } else {
-                    badgeHTML = `<span class="px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-shield-check"></i> Status Aman (${daysRemaining} Hari)
-                                 </span>`;
-                }
-
-                // Create WhatsApp Message Draft
-                const waMessage = encodeURIComponent(
-                    `Halo *${p.namaAnggota}* 👋,\n` +
-                    `Pesan resmi dari *Perpustakaan SMA Negeri 4 Manado* 📚.\n\n` +
-                    `Menginformasikan bahwa peminjaman buku:\n` +
-                    `📖 *${p.judulBuku}*\n` +
-                    `🗓️ Tanggal Jatuh Tempo: *${p.tglTempo}*\n` +
-                    `📌 Status saat ini: *${daysRemaining < 0 ? 'Terlambat ' + Math.abs(daysRemaining) + ' Hari' : 'Sisa ' + daysRemaining + ' Hari'}*\n\n` +
-                    `Mohon dapat segera dikembalikan atau diperpanjang di ruang perpustakaan. Terima kasih! ✨`
-                );
-
-                const formattedWA = formatPhoneNumber(p.wa);
-                const waUrl = `https://wa.me/${formattedWA}?text=${waMessage}`;
-
-                const card = document.createElement('div');
-                card.className = `glass-card rounded-2xl p-5 border ${borderClass} transition duration-200 hover:bg-slate-900/80 space-y-4`;
-                card.innerHTML = `
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
-                        <div class="space-y-1">
-                            <div class="flex items-center gap-2 flex-wrap">
-                                <h3 class="font-extrabold text-white text-base">${p.namaAnggota}</h3>
-                                <span class="text-xs text-slate-400 font-mono">NISN: ${p.nisn}</span>
-                            </div>
-                            <p class="text-sm text-cyan-300 font-semibold flex items-center gap-1.5">
-                                <i class="fa-solid fa-book text-xs"></i> ${p.judulBuku}
-                            </p>
-                        </div>
-                        <div>
-                            ${badgeHTML}
-                        </div>
-                    </div>
-
-                    <!-- Visual Progress Bar -->
-                    <div class="space-y-1.5">
-                        <div class="flex items-center justify-between text-xs text-slate-400 font-medium">
-                            <span>Pinjam: <strong class="text-slate-200">${p.tglPinjam}</strong></span>
-                            <span>Progres Waktu: <strong class="text-white">${percentRemaining}%</strong> Sisa</span>
-                            <span>Tempo: <strong class="text-amber-300">${p.tglTempo}</strong></span>
-                        </div>
-                        <div class="w-full bg-slate-950 h-3 rounded-full overflow-hidden p-0.5 border border-slate-800">
-                            <div class="${progressColorClass} h-full rounded-full transition-all duration-500" style="width: ${percentRemaining}%;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Action Bar -->
-                    <div class="flex items-center justify-between pt-2 border-t border-slate-800/80 flex-wrap gap-2">
-                        <div class="text-xs text-slate-400">
-                            No. WA: <span class="text-slate-200 font-mono">${p.wa}</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            ${currentRole === 'admin' ? `
-                                <a href="${waUrl}" target="_blank" class="px-4 py-2 text-xs font-bold rounded-xl text-white bg-emerald-600 hover:bg-emerald-500 shadow-lg flex items-center gap-1.5 transition ${isCritical ? 'ring-2 ring-emerald-400 ring-offset-2 ring-offset-slate-950' : ''}">
-                                    <i class="fa-brands fa-whatsapp text-sm"></i> Kirim Pengingat WA
-                                </a>
-                                <button onclick="kembalikanBuku('${p.id}')" class="px-3 py-2 text-xs font-bold rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition">
-                                    <i class="fa-solid fa-check mr-1"></i> Selesai / Kembalikan
-                                </button>
-                            ` : `
-                                <span class="text-[11px] text-slate-400 italic">Diingatkan via Sistem Perpus</span>
-                            `}
-                        </div>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-        }
-
-        // 3. Render Duta Literasi
-        function renderDuta() {
-            const tbody = document.getElementById('tabel-duta-body');
-            const badgeCount = document.getElementById('duta-count-badge');
-            tbody.innerHTML = '';
-
-            badgeCount.innerText = `${dutaData.length} Pendaftar`;
-
-            if (dutaData.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="6" class="text-center py-8 text-slate-500">Belum ada pendaftar Duta Literasi bulan ini.</td></tr>`;
-                return;
-            }
-
-            dutaData.forEach((duta, idx) => {
-                const tr = document.createElement('tr');
-                tr.className = "hover:bg-slate-900/50 transition";
-                tr.innerHTML = `
-                    <td class="p-3.5 font-bold text-white flex items-center gap-2">
-                        <span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-300 text-xs flex items-center justify-center font-extrabold border border-amber-500/30">${idx+1}</span>
-                        ${duta.nama}
-                    </td>
-                    <td class="p-3.5 text-xs text-slate-300">${duta.nisn} <span class="text-purple-400 font-semibold">(${duta.kelas})</span></td>
-                    <td class="p-3.5 text-xs text-slate-400 font-mono">${duta.wa}</td>
-                    <td class="p-3.5 text-xs text-slate-400">${duta.tglDaftar}</td>
-                    <td class="p-3.5">
-                        <span class="px-2.5 py-1 text-[11px] font-extrabold rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
-                            ${duta.status || 'Terdaftar'}
-                        </span>
-                    </td>
-                    <td class="p-3.5 text-center">
-                        <button onclick="lihatDetailDuta('${duta.id}')" class="px-3 py-1.5 text-xs font-bold bg-purple-600/80 hover:bg-purple-600 text-white rounded-lg border border-purple-400/30 transition shadow">
-                            <i class="fa-solid fa-eye mr-1"></i> Lihat Jawaban
-                        </button>
-                    </td>
-                `;
-                tbody.appendChild(tr);
-            });
-        }
-
-        // 4. Render Anggota
         function renderAnggota() {
             const tbody = document.getElementById('tabel-anggota-body');
             const search = (document.getElementById('search-anggota').value || '').toLowerCase();
@@ -1294,249 +1160,548 @@
                 return a.nama.toLowerCase().includes(search) || a.nisn.includes(search) || a.kelas.toLowerCase().includes(search);
             });
 
-            if (filtered.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="6" class="text-center py-8 text-slate-500">Tidak ada anggota perpustakaan yang sesuai.</td></tr>`;
-                return;
-            }
-
             filtered.forEach(a => {
-                const activeLoans = peminjamanData.filter(p => p.nisn === a.nisn).length;
+                let badgeClass = "bg-slate-800 text-slate-400";
+                if (a.status === 'Aktif') badgeClass = "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
+                else if (a.status === 'Tidak Aktif') badgeClass = "bg-slate-800 text-slate-400";
+                else if (a.status === 'Alumni') badgeClass = "bg-cyan-500/20 text-cyan-300 border border-cyan-500/30";
+                else if (a.status === 'Sudah Tidak Ada') badgeClass = "bg-rose-500/20 text-rose-400 border border-rose-500/30";
 
                 const tr = document.createElement('tr');
                 tr.className = "hover:bg-slate-900/50 transition";
                 tr.innerHTML = `
-                    <td class="p-3.5 font-bold text-white">${a.nama}</td>
-                    <td class="p-3.5 text-xs text-slate-300 font-mono">${a.nisn}</td>
-                    <td class="p-3.5 text-xs text-purple-300 font-semibold">${a.kelas}</td>
-                    <td class="p-3.5 text-xs text-slate-400 font-mono">${a.wa}</td>
-                    <td class="p-3.5">
-                        <span class="px-2.5 py-1 text-[11px] font-bold rounded-full ${activeLoans > 0 ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' : 'bg-slate-800 text-slate-400'}">
-                            ${activeLoans} Buku Dipinjam
+                    <td class="p-3 font-mono text-cyan-400">${a.nisn}</td>
+                    <td class="p-3 font-bold text-white">${a.nama}</td>
+                    <td class="p-3 text-purple-300 font-semibold">${a.kelas}</td>
+                    <td class="p-3">
+                        <span class="px-2.5 py-0.5 text-[10px] font-extrabold rounded-full ${badgeClass}">
+                            ${a.status}
                         </span>
                     </td>
-                    <td class="p-3.5 text-center">
-                        <a href="https://wa.me/${formatPhoneNumber(a.wa)}" target="_blank" class="px-3 py-1.5 text-xs font-bold bg-emerald-600/80 hover:bg-emerald-500 text-white rounded-lg border border-emerald-400/30 transition inline-flex items-center gap-1 shadow">
-                            <i class="fa-brands fa-whatsapp"></i> Chat WA
-                        </a>
+                    <td class="p-3 text-center font-bold text-amber-400">${a.visits || 0} Visit</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function renderLeaderboard() {
+            const container = document.getElementById('leaderboard-container');
+            container.innerHTML = '';
+
+            // Sort members by visits descending
+            const topMembers = [...anggotaData].sort((a, b) => (b.visits || 0) - (a.visits || 0)).slice(0, 3);
+
+            const medals = [
+                { color: 'from-amber-400 to-yellow-600', icon: 'fa-trophy', label: 'Juara 1' },
+                { color: 'from-slate-300 to-slate-500', icon: 'fa-medal', label: 'Juara 2' },
+                { color: 'from-amber-700 to-amber-900', icon: 'fa-award', label: 'Juara 3' }
+            ];
+
+            topMembers.forEach((m, idx) => {
+                const medal = medals[idx] || medals[2];
+                const card = document.createElement('div');
+                card.className = "glass-card rounded-2xl p-4 border border-amber-500/20 flex items-center gap-4 bg-slate-950/80";
+                card.innerHTML = `
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr ${medal.color} flex items-center justify-center text-slate-950 font-black text-xl shadow-lg flex-shrink-0">
+                        <i class="fa-solid ${medal.icon}"></i>
+                    </div>
+                    <div class="overflow-hidden">
+                        <span class="text-[10px] font-extrabold uppercase text-amber-400 tracking-wider">${medal.label}</span>
+                        <h4 class="font-bold text-white text-sm truncate">${m.nama}</h4>
+                        <p class="text-xs text-slate-400">${m.kelas} — <strong class="text-cyan-300">${m.visits || 0}x Kunjungan</strong></p>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function renderDuta() {
+            const tbody = document.getElementById('tabel-duta-body');
+            const badgeCount = document.getElementById('duta-count-badge');
+            const releasedName = document.getElementById('released-duta-name');
+            const releasedClass = document.getElementById('released-duta-class');
+
+            tbody.innerHTML = '';
+            badgeCount.innerText = `${dutaData.length} Pendaftar`;
+
+            // Find released Duta
+            const released = dutaData.find(d => d.isReleased);
+            if (released) {
+                releasedName.innerText = released.nama;
+                releasedClass.innerText = `${released.kelas} (NISN: ${released.nisn})`;
+            } else {
+                releasedName.innerText = "Belum Diumumkan";
+                releasedClass.innerText = "Pendaftaran Masih Dibuka";
+            }
+
+            if (dutaData.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" class="text-center py-6 text-slate-500">Belum ada pendaftar Duta Literasi.</td></tr>`;
+                return;
+            }
+
+            dutaData.forEach((d, idx) => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-900/50 transition";
+                tr.innerHTML = `
+                    <td class="p-3 font-bold text-white flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-300 text-[10px] flex items-center justify-center font-extrabold">${idx+1}</span>
+                        ${d.nama}
+                    </td>
+                    <td class="p-3 text-slate-300">${d.nisn} <span class="text-purple-400">(${d.kelas})</span></td>
+                    <td class="p-3 font-mono text-slate-400">${d.wa}</td>
+                    <td class="p-3 text-slate-400">${d.tglDaftar}</td>
+                    <td class="p-3">
+                        <span class="px-2.5 py-0.5 text-[10px] font-extrabold rounded-full ${d.isReleased ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40' : 'bg-cyan-500/20 text-cyan-300'}">
+                            ${d.isReleased ? '🏆 Duta Terpilih (Released)' : 'Calon Terdaftar'}
+                        </span>
+                    </td>
+                    <td class="p-3 text-center">
+                        <button onclick="viewDutaDetail('${d.id}')" class="px-2.5 py-1 text-xs font-bold bg-purple-600/80 hover:bg-purple-600 text-white rounded-lg transition">
+                            <i class="fa-solid fa-eye"></i> Lihat
+                        </button>
                     </td>
                 `;
                 tbody.appendChild(tr);
             });
         }
 
-        // POPULATE MODAL SELECT OPTIONS
-        function populateSelects() {
-            const selectAnggota = document.getElementById('pinjam-anggota-select');
-            const selectBuku = document.getElementById('pinjam-buku-select');
+        function renderPinjamanSiswa() {
+            const container = document.getElementById('container-pinjaman-siswa');
+            container.innerHTML = '';
 
-            if (selectAnggota) {
-                selectAnggota.innerHTML = '';
-                anggotaData.forEach(a => {
-                    const opt = document.createElement('option');
-                    opt.value = a.id;
-                    opt.innerText = `${a.nama} (${a.kelas} - ${a.nisn})`;
-                    selectAnggota.appendChild(opt);
-                });
+            // Filter for logged student or show general loans if admin
+            let list = pinjamanData;
+            if (loggedSiswa) {
+                list = pinjamanData.filter(p => p.nisn === loggedSiswa.nisn);
             }
 
-            if (selectBuku) {
-                selectBuku.innerHTML = '';
-                bukuData.forEach(b => {
-                    const opt = document.createElement('option');
-                    opt.value = b.id;
-                    opt.innerText = `${b.judul} (Stok: ${b.stok})`;
-                    selectBuku.appendChild(opt);
-                });
+            if (list.length === 0) {
+                container.innerHTML = `<div class="glass-card rounded-2xl p-8 text-center text-slate-500 text-xs">Belum ada peminjaman aktif terdaftar.</div>`;
+                return;
             }
+
+            const now = new Date();
+            now.setHours(0,0,0,0);
+
+            list.forEach(p => {
+                const tglTempo = new Date(p.tglTempo);
+                tglTempo.setHours(0,0,0,0);
+                const diffDays = Math.ceil((tglTempo - now) / (1000 * 60 * 60 * 24));
+
+                let badgeHTML = '';
+                let borderClass = 'border-slate-800';
+                let progressColor = 'bg-cyan-500';
+
+                if (p.status === 'Disetujui') {
+                    if (diffDays < 0) {
+                        badgeHTML = `<span class="px-3 py-1 rounded-full text-xs font-extrabold bg-rose-500/20 text-rose-400 border border-rose-500/40 pulse-warning">Terlambat ${Math.abs(diffDays)} Hari</span>`;
+                        borderClass = 'border-rose-500/50';
+                        progressColor = 'bg-rose-500';
+                    } else if (diffDays <= 2) {
+                        badgeHTML = `<span class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-500/20 text-amber-300 border border-amber-500/40 pulse-warning">H-${diffDays} Jatuh Tempo</span>`;
+                        borderClass = 'border-amber-500/50';
+                        progressColor = 'bg-amber-400';
+                    } else {
+                        badgeHTML = `<span class="px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Aman (${diffDays} Hari)</span>`;
+                    }
+                } else {
+                    badgeHTML = `<span class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-500/20 text-amber-300">Menunggu Persetujuan Admin</span>`;
+                }
+
+                const card = document.createElement('div');
+                card.className = `glass-card rounded-2xl p-5 border ${borderClass} space-y-3`;
+                card.innerHTML = `
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                            <h4 class="font-extrabold text-white text-base">${p.judulBuku}</h4>
+                            <p class="text-xs text-slate-400">Peminjam: <strong class="text-slate-200">${p.nama}</strong> (${p.nisn})</p>
+                        </div>
+                        <div>${badgeHTML}</div>
+                    </div>
+                    <div class="flex items-center justify-between text-xs text-slate-400 font-medium pt-1">
+                        <span>Pinjam: ${p.tglPinjam}</span>
+                        <span>Jatuh Tempo: <strong class="text-amber-300">${p.tglTempo}</strong></span>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
         }
 
-        // FORM SUBMISSION HANDLERS
-        function simpanBukuBaru(e) {
+        // ADMIN TABLES RENDER
+        function renderAdminTables() {
+            // Admin Anggota Table
+            const tbodyAnggota = document.getElementById('tabel-admin-anggota-body');
+            tbodyAnggota.innerHTML = '';
+            anggotaData.forEach(a => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="p-3 font-mono text-cyan-400">${a.nisn}</td>
+                    <td class="p-3 font-bold text-white">${a.nama}</td>
+                    <td class="p-3 text-purple-300">${a.kelas}</td>
+                    <td class="p-3 font-mono text-slate-400">${a.pass}</td>
+                    <td class="p-3 font-bold text-emerald-400">${a.status}</td>
+                    <td class="p-3 text-center space-x-1">
+                        <button onclick="editAnggotaAdmin('${a.nisn}')" class="px-2 py-1 text-xs bg-cyan-600/80 hover:bg-cyan-500 text-white rounded"><i class="fa-solid fa-pen"></i></button>
+                        <button onclick="deleteAnggotaAdmin('${a.nisn}')" class="px-2 py-1 text-xs bg-rose-600/80 hover:bg-rose-500 text-white rounded"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                `;
+                tbodyAnggota.appendChild(tr);
+            });
+
+            // Admin Buku Table
+            const tbodyBuku = document.getElementById('tabel-admin-buku-body');
+            tbodyBuku.innerHTML = '';
+            bukuData.forEach(b => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="p-3 font-bold text-white">${b.judul}</td>
+                    <td class="p-3 text-slate-300">${b.pengarang}</td>
+                    <td class="p-3 text-purple-300">${b.kategori}</td>
+                    <td class="p-3 font-bold text-cyan-400">${b.stok}</td>
+                    <td class="p-3 text-center space-x-1">
+                        <button onclick="editBukuAdmin('${b.id}')" class="px-2 py-1 text-xs bg-cyan-600/80 hover:bg-cyan-500 text-white rounded"><i class="fa-solid fa-pen"></i></button>
+                        <button onclick="deleteBukuAdmin('${b.id}')" class="px-2 py-1 text-xs bg-rose-600/80 hover:bg-rose-500 text-white rounded"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                `;
+                tbodyBuku.appendChild(tr);
+            });
+
+            // Admin Pinjam & WA Table
+            const tbodyPinjam = document.getElementById('tabel-admin-pinjam-body');
+            tbodyPinjam.innerHTML = '';
+            pinjamanData.forEach(p => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="p-3 font-bold text-white">${p.nama} (${p.nisn})</td>
+                    <td class="p-3 text-cyan-300">${p.judulBuku}</td>
+                    <td class="p-3 text-slate-300">${p.tglPinjam} / <strong class="text-amber-300">${p.tglTempo}</strong></td>
+                    <td class="p-3 font-bold">${p.status}</td>
+                    <td class="p-3 text-center space-x-1">
+                        ${p.status === 'Menunggu' ? `
+                            <button onclick="approvePinjam('${p.id}')" class="px-2 py-1 text-xs bg-emerald-600 text-white rounded">Setujui</button>
+                            <button onclick="rejectPinjam('${p.id}')" class="px-2 py-1 text-xs bg-rose-600 text-white rounded">Tolak</button>
+                        ` : `
+                            <button onclick="kirimWAPengingatSingle('${p.id}')" class="px-2.5 py-1 text-xs bg-emerald-600 text-white rounded flex items-center gap-1 mx-auto">
+                                <i class="fa-brands fa-whatsapp"></i> WA Pengingat
+                            </button>
+                        `}
+                    </td>
+                `;
+                tbodyPinjam.appendChild(tr);
+            });
+
+            // Admin Release Duta Table
+            const tbodyDuta = document.getElementById('tabel-admin-duta-body');
+            tbodyDuta.innerHTML = '';
+            dutaData.forEach(d => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="p-3 font-bold text-white">${d.nama}</td>
+                    <td class="p-3 text-purple-300">${d.nisn} (${d.kelas})</td>
+                    <td class="p-3 font-mono text-slate-400">${d.wa}</td>
+                    <td class="p-3 font-bold ${d.isReleased ? 'text-amber-400' : 'text-slate-400'}">
+                        ${d.isReleased ? 'Aktif Terbit' : 'Belum'}
+                    </td>
+                    <td class="p-3 text-center">
+                        <button onclick="releaseDutaLiterasi('${d.id}')" class="px-3 py-1 text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 rounded shadow">
+                            <i class="fa-solid fa-bullhorn mr-1"></i> Release Duta Literasi Bulan Berjalan
+                        </button>
+                    </td>
+                `;
+                tbodyDuta.appendChild(tr);
+            });
+        }
+
+        // ACTIONS & HANDLERS
+        function simpanAnggotaAdmin(e) {
             e.preventDefault();
-            const judul = document.getElementById('buku-judul').value;
-            const pengarang = document.getElementById('buku-pengarang').value;
+            const nisnOld = document.getElementById('edit-anggota-nisn-old').value;
+            const nisn = document.getElementById('anggota-nisn').value.trim();
+            const nama = document.getElementById('anggota-nama').value.trim();
+            const kelas = document.getElementById('anggota-kelas').value.trim();
+            const pass = document.getElementById('anggota-pass').value.trim();
+            const wa = document.getElementById('anggota-wa').value.trim();
+            const status = document.getElementById('anggota-status').value;
+
+            if (nisnOld) {
+                const idx = anggotaData.findIndex(a => a.nisn === nisnOld);
+                if (idx !== -1) {
+                    anggotaData[idx] = { nisn, nama, kelas, pass, wa, status, visits: anggotaData[idx].visits || 0 };
+                }
+            } else {
+                anggotaData.push({ nisn, nama, kelas, pass, wa, status, visits: 0 });
+            }
+
+            saveAllStorage();
+            renderAllViews();
+            closeModal('modal-tambah-anggota');
+            showToast("Data anggota berhasil disimpan!");
+        }
+
+        function editAnggotaAdmin(nisn) {
+            const a = anggotaData.find(m => m.nisn === nisn);
+            if (!a) return;
+
+            document.getElementById('edit-anggota-nisn-old').value = a.nisn;
+            document.getElementById('anggota-nisn').value = a.nisn;
+            document.getElementById('anggota-nama').value = a.nama;
+            document.getElementById('anggota-kelas').value = a.kelas;
+            document.getElementById('anggota-pass').value = a.pass;
+            document.getElementById('anggota-wa').value = a.wa;
+            document.getElementById('anggota-status').value = a.status;
+
+            document.getElementById('title-modal-anggota').innerText = "Edit Anggota Perpustakaan";
+            openModal('modal-tambah-anggota');
+        }
+
+        function deleteAnggotaAdmin(nisn) {
+            anggotaData = anggotaData.filter(a => a.nisn !== nisn);
+            saveAllStorage();
+            renderAllViews();
+            showToast("Anggota dihapus.");
+        }
+
+        function simpanBukuAdmin(e) {
+            e.preventDefault();
+            const id = document.getElementById('edit-buku-id').value || ('B-' + Math.floor(100 + Math.random() * 900));
+            const judul = document.getElementById('buku-judul').value.trim();
+            const pengarang = document.getElementById('buku-pengarang').value.trim();
             const kategori = document.getElementById('buku-kategori').value;
             const stok = parseInt(document.getElementById('buku-stok').value) || 1;
             const cover = document.getElementById('buku-cover').value || 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=400&q=80';
-            const sinopsis = document.getElementById('buku-sinopsis').value;
+            const sinopsis = document.getElementById('buku-sinopsis').value.trim();
 
-            const newBuku = {
-                id: 'B-' + Math.floor(100 + Math.random() * 900),
-                judul,
-                pengarang,
-                kategori,
-                stok,
-                tglRilis: formatDateStr(new Date()),
-                cover,
-                sinopsis
-            };
+            const existingIdx = bukuData.findIndex(b => b.id === id);
+            if (existingIdx !== -1) {
+                bukuData[existingIdx] = { id, judul, pengarang, kategori, stok, cover, sinopsis };
+            } else {
+                bukuData.push({ id, judul, pengarang, kategori, stok, cover, sinopsis });
+            }
 
-            bukuData.unshift(newBuku);
-            saveAllToStorage();
+            saveAllStorage();
             renderAllViews();
             closeModal('modal-tambah-buku');
-            document.getElementById('form-tambah-buku').reset();
-            showToast('Buku baru berhasil ditambahkan!');
+            showToast("Buku berhasil disimpan!");
         }
 
-        function simpanPinjamanBaru(e) {
+        function editBukuAdmin(id) {
+            const b = bukuData.find(x => x.id === id);
+            if (!b) return;
+
+            document.getElementById('edit-buku-id').value = b.id;
+            document.getElementById('buku-judul').value = b.judul;
+            document.getElementById('buku-pengarang').value = b.pengarang;
+            document.getElementById('buku-kategori').value = b.kategori;
+            document.getElementById('buku-stok').value = b.stok;
+            document.getElementById('buku-cover').value = b.cover;
+            document.getElementById('buku-sinopsis').value = b.sinopsis;
+
+            openModal('modal-tambah-buku');
+        }
+
+        function deleteBukuAdmin(id) {
+            bukuData = bukuData.filter(b => b.id !== id);
+            saveAllStorage();
+            renderAllViews();
+            showToast("Buku dihapus.");
+        }
+
+        function pinjamBukuAction(bukuId) {
+            if (!loggedSiswa) {
+                showToast("Silakan Login Siswa terlebih dahulu.");
+                openModal('modal-login-siswa');
+                return;
+            }
+
+            const select = document.getElementById('pinjam-buku-select');
+            select.innerHTML = '';
+            bukuData.forEach(b => {
+                const opt = document.createElement('option');
+                opt.value = b.id;
+                opt.innerText = `${b.judul} (Stok: ${b.stok})`;
+                if (b.id === bukuId) opt.selected = true;
+                select.appendChild(opt);
+            });
+
+            const tglP = new Date();
+            const tglT = new Date();
+            tglT.setDate(tglP.getDate() + 7);
+
+            document.getElementById('pinjam-tgl-pinjam').value = formatDateStr(tglP);
+            document.getElementById('pinjam-tgl-tempo').value = formatDateStr(tglT);
+
+            openModal('modal-pinjam-buku');
+        }
+
+        function checkStudentLoanAction() {
+            if (!loggedSiswa) {
+                openModal('modal-login-siswa');
+            } else {
+                pinjamBukuAction(bukuData[0]?.id);
+            }
+        }
+
+        function prosesPengajuanPinjam(e) {
             e.preventDefault();
-            const anggotaId = document.getElementById('pinjam-anggota-select').value;
+            if (!loggedSiswa) return;
+
             const bukuId = document.getElementById('pinjam-buku-select').value;
+            const buku = bukuData.find(b => b.id === bukuId);
             const tglPinjam = document.getElementById('pinjam-tgl-pinjam').value;
             const tglTempo = document.getElementById('pinjam-tgl-tempo').value;
 
-            const anggota = anggotaData.find(a => a.id === anggotaId);
-            const buku = bukuData.find(b => b.id === bukuId);
+            if (!buku) return;
 
-            if (!anggota || !buku) return;
-
-            const newPinjaman = {
+            const newP = {
                 id: 'P-' + Math.floor(1000 + Math.random() * 9000),
-                anggotaId: anggota.id,
-                namaAnggota: anggota.nama,
-                nisn: anggota.nisn,
-                wa: anggota.wa,
+                nisn: loggedSiswa.nisn,
+                nama: loggedSiswa.nama,
+                wa: loggedSiswa.wa,
                 bukuId: buku.id,
                 judulBuku: buku.judul,
                 tglPinjam,
-                tglTempo
+                tglTempo,
+                status: 'Menunggu'
             };
 
-            peminjamanData.unshift(newPinjaman);
-            saveAllToStorage();
+            pinjamanData.unshift(newP);
+            saveAllStorage();
             renderAllViews();
-            closeModal('modal-tambah-pinjaman');
-            showToast('Transaksi peminjaman berhasil dicatat!');
+            closeModal('modal-pinjam-buku');
+            showToast("Pengajuan pinjam berhasil terikirim ke Admin.");
+        }
+
+        function approvePinjam(id) {
+            const p = pinjamanData.find(x => x.id === id);
+            if (p) {
+                p.status = 'Disetujui';
+                saveAllStorage();
+                renderAllViews();
+                showToast("Peminjaman disetujui!");
+            }
+        }
+
+        function rejectPinjam(id) {
+            const p = pinjamanData.find(x => x.id === id);
+            if (p) {
+                p.status = 'Ditolak';
+                saveAllStorage();
+                renderAllViews();
+                showToast("Peminjaman ditolak.");
+            }
+        }
+
+        function kirimWAPengingatSingle(id) {
+            const p = pinjamanData.find(x => x.id === id);
+            if (!p) return;
+
+            const msg = encodeURIComponent(
+                `Halo *${p.nama}* 👋,\n` +
+                `Pesan resmi dari *Perpustakaan SMA Negeri 4 Manado* 📚.\n\n` +
+                `Peminjaman buku:\n` +
+                `📖 *${p.judulBuku}*\n` +
+                `🗓️ Jatuh Tempo: *${p.tglTempo}*\n\n` +
+                `Mohon dapat segera dikembalikan ke ruang perpustakaan. Terima kasih! ✨`
+            );
+
+            let waNum = p.wa.replace(/[^0-9]/g, '');
+            if (waNum.startsWith('0')) waNum = '62' + waNum.substring(1);
+
+            window.open(`https://wa.me/${waNum}?text=${msg}`, '_blank');
+        }
+
+        function kirimSemuaWAJatuhTempo() {
+            showToast("Mengirim notifikasi pengingat WA...");
+            const criticals = pinjamanData.filter(p => p.status === 'Disetujui');
+            if (criticals.length > 0) {
+                kirimWAPengingatSingle(criticals[0].id);
+            }
+        }
+
+        function handleDutaFormAction() {
+            if (!loggedSiswa) {
+                openModal('modal-login-siswa');
+            } else {
+                document.getElementById('duta-nama').value = loggedSiswa.nama;
+                document.getElementById('duta-nisn-kelas').value = `${loggedSiswa.nisn} (${loggedSiswa.kelas})`;
+                openModal('modal-daftar-duta');
+            }
         }
 
         function simpanPendaftaranDuta(e) {
             e.preventDefault();
-            const nama = document.getElementById('duta-nama').value;
-            const nisn = document.getElementById('duta-nisn').value;
-            const kelas = document.getElementById('duta-kelas').value;
-            const wa = document.getElementById('duta-wa').value;
-            const q1 = document.getElementById('duta-q1').value;
-            const q2 = document.getElementById('duta-q2').value;
-            const q3 = document.getElementById('duta-q3').value;
+            if (!loggedSiswa) return;
 
-            const newDuta = {
+            const q1 = document.getElementById('duta-q1').value.trim();
+            const q2 = document.getElementById('duta-q2').value.trim();
+            const q3 = document.getElementById('duta-q3').value.trim();
+
+            const newD = {
                 id: 'D-' + Math.floor(10 + Math.random() * 90),
-                nama,
-                nisn,
-                kelas,
-                wa,
+                nisn: loggedSiswa.nisn,
+                nama: loggedSiswa.nama,
+                kelas: loggedSiswa.kelas,
+                wa: loggedSiswa.wa,
                 tglDaftar: formatDateStr(new Date()),
-                status: 'Menunggu Wawancara',
-                q1,
-                q2,
-                q3
+                q1, q2, q3,
+                isReleased: false
             };
 
-            dutaData.unshift(newDuta);
-            saveAllToStorage();
-            renderDuta();
-            closeModal('modal-daftar-duta');
-            document.getElementById('form-daftar-duta').reset();
-            showToast('Pendaftaran Duta Literasi berhasil dikirim!');
-        }
-
-        function simpanAnggotaBaru(e) {
-            e.preventDefault();
-            const nama = document.getElementById('anggota-nama').value;
-            const nisn = document.getElementById('anggota-nisn').value;
-            const kelas = document.getElementById('anggota-kelas').value;
-            const wa = document.getElementById('anggota-wa').value;
-
-            const newAnggota = {
-                id: 'A-' + Math.floor(10 + Math.random() * 90),
-                nama,
-                nisn,
-                kelas,
-                wa
-            };
-
-            anggotaData.unshift(newAnggota);
-            saveAllToStorage();
+            dutaData.unshift(newD);
+            saveAllStorage();
             renderAllViews();
-            closeModal('modal-tambah-anggota');
-            document.getElementById('form-tambah-anggota').reset();
-            showToast('Anggota baru berhasil disimpan!');
+            closeModal('modal-daftar-duta');
+            showToast("Pendaftaran Duta Literasi berhasil dikirim!");
         }
 
-        // QUICK ACTIONS
-        function pinjamBukuCepat(bukuId) {
-            const buku = bukuData.find(b => b.id === bukuId);
-            if (buku) {
-                if (currentRole === 'admin') {
-                    openModal('modal-tambah-pinjaman');
-                    const selectBuku = document.getElementById('pinjam-buku-select');
-                    if (selectBuku) selectBuku.value = bukuId;
-                } else {
-                    showToast('Siswa dapat mendatangi pustakawan untuk mencatatkan peminjaman!');
-                }
-            }
+        function releaseDutaLiterasi(id) {
+            dutaData.forEach(d => d.isReleased = (d.id === id));
+            saveAllStorage();
+            renderAllViews();
+            showToast("Release Duta Literasi Bulan Berjalan Berhasil!");
         }
 
-        function kembalikanBuku(peminjamanId) {
-            peminjamanData = peminjamanData.filter(p => p.id !== peminjamanId);
-            saveAllToStorage();
-            renderPeminjaman();
-            renderAnggota();
-            showToast('Status pengembalian buku dikonfirmasi.');
-        }
-
-        function lihatDetailDuta(dutaId) {
-            const duta = dutaData.find(d => d.id === dutaId);
-            if (!duta) return;
+        function viewDutaDetail(id) {
+            const d = dutaData.find(x => x.id === id);
+            if (!d) return;
 
             const content = document.getElementById('detail-duta-content');
             content.innerHTML = `
-                <div class="p-3 bg-slate-900 rounded-xl border border-slate-800 space-y-1">
-                    <h4 class="font-bold text-white">${duta.nama} (${duta.kelas})</h4>
-                    <p class="text-xs text-slate-400">NISN: ${duta.nisn} | WA: ${duta.wa}</p>
+                <div class="p-3 bg-slate-900 rounded-xl space-y-1 border border-slate-800">
+                    <h4 class="font-bold text-white">${d.nama} (${d.kelas})</h4>
+                    <p class="text-[11px] text-slate-400">NISN: ${d.nisn} | WA: ${d.wa}</p>
                 </div>
-                <div class="space-y-3 pt-2">
+                <div class="space-y-2 pt-2">
                     <div>
-                        <p class="text-xs font-bold text-amber-300">1. Motivasi Utama:</p>
-                        <p class="text-xs text-slate-300 bg-slate-950 p-2.5 rounded-lg border border-slate-800 mt-1">${duta.q1}</p>
+                        <p class="font-bold text-amber-300">1. Motivasi Utama:</p>
+                        <p class="bg-slate-950 p-2.5 rounded-lg border border-slate-800 mt-0.5">${d.q1}</p>
                     </div>
                     <div>
-                        <p class="text-xs font-bold text-amber-300">2. Buku Berkesan & Trik Mengajak Teman:</p>
-                        <p class="text-xs text-slate-300 bg-slate-950 p-2.5 rounded-lg border border-slate-800 mt-1">${duta.q2}</p>
+                        <p class="font-bold text-amber-300">2. Buku Berkesan & Trik Mengajak Teman:</p>
+                        <p class="bg-slate-950 p-2.5 rounded-lg border border-slate-800 mt-0.5">${d.q2}</p>
                     </div>
                     <div>
-                        <p class="text-xs font-bold text-amber-300">3. Rencana Program Inovatif:</p>
-                        <p class="text-xs text-slate-300 bg-slate-950 p-2.5 rounded-lg border border-slate-800 mt-1">${duta.q3}</p>
+                        <p class="font-bold text-amber-300">3. Rencana Program Inovatif:</p>
+                        <p class="bg-slate-950 p-2.5 rounded-lg border border-slate-800 mt-0.5">${d.q3}</p>
                     </div>
                 </div>
             `;
             openModal('modal-detail-duta');
         }
 
-        // HELPER FUNCTIONS
-        function formatPhoneNumber(phone) {
-            if (!phone) return '628123456789';
-            let cleaned = phone.replace(/[^0-9]/g, '');
-            if (cleaned.startsWith('0')) {
-                cleaned = '62' + cleaned.substring(1);
-            }
-            return cleaned;
+        // UTILITY
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
         }
 
-        function openModal(modalId) {
-            document.getElementById(modalId).classList.remove('hidden');
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
         }
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.add('hidden');
-        }
-
-        function showToast(message) {
+        function showToast(msg) {
             const toast = document.getElementById('toast');
             const toastMsg = document.getElementById('toast-msg');
-            toastMsg.innerText = message;
-
+            toastMsg.innerText = msg;
             toast.classList.remove('translate-y-20', 'opacity-0');
             toast.classList.add('translate-y-0', 'opacity-100');
 
@@ -1546,10 +1711,8 @@
             }, 3000);
         }
 
-        // INITIALIZE ON WINDOW LOAD
         window.onload = function() {
-            initApp();
-            setRole('siswa');
+            initData();
         };
     </script>
 </body>
